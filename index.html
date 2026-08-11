@@ -1,6 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO FOR GOOGLE -->
+  <title>AL-SALAM | The Peace - Islamic Charity in Inanda, Durban</title>
+  <meta name="description" content="AL-SALAM The Peace is an Islamic charity based in Inanda, Durban, South Africa. We focus on Sadaqah Jariyah, feeding programs, and community support. Donate and support our work for the sake of Allah.">
+  <meta name="keywords" content="AL-SALAM, Al Salam, The Peace, Islamic Charity, Sadaqah Jariyah, Inanda Charity, Durban Charity, South Africa, Feeding Program, Donate Lillah, Muslim Charity">
+  <meta name="author" content="AL-SALAM The Peace">
+  
+  <!-- GOOGLE WILL SHOW THIS WHEN PEOPLE SHARE THE LINK -->
+  <meta property="og:title" content="AL-SALAM | The Peace">
+  <meta property="og:description" content="Islamic Charity in Inanda, Durban. Sadaqah Jariyah & Feeding Programs">
+  <meta property="og:image" content="https://0671271038.github.io/AL-SALAM/D1.jpg">
+  <meta property="og:url" content="https://0671271038.github.io/AL-SALAM">
+  
+  <!-- YOUR EXISTING STYLE GOES HERE -->
+  <style>
+    /* ... your CSS ... */
+    
+    /* LIGHTBOX STYLE */
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      cursor: pointer;
+    }
+    #lightbox-img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    img { cursor: pointer; }
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AL-SALAM | The Peace - Inanda, South Africa</title>
@@ -56,7 +93,14 @@ img { cursor: pointer; }
 </style>
 </head>
 <body>
-
+   
+  <h1>AL-SALAM | The Peace</h1>
+  <p>AL-SALAM is an Islamic charity based in Inanda, 
+     Durban, South Africa. We run Sadaqah Jariyah projects, 
+     feeding programs, and community support for those in need. 
+     May Allah accept from all donors.</p>
+  
+  <!-- your photos here with the lightbox click -->
   <header>
     <div class="brand">
       <span class="icon">☪️</span>
@@ -171,6 +215,7 @@ img { cursor: pointer; }
 <div id="lightbox" onclick="this.style.display='none'">
   <img id="lightbox-img">
 </div>
+
    <script>
 document.querySelectorAll('img').forEach(img => {
   img.onclick = () => {
