@@ -4,10 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery - AL-SALAM | The Peace</title>
+  
+  <!-- SOCIAL ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
   <style>
+    html { scroll-behavior: smooth; } /* Smooth scrolling */
     * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, sans-serif;}
     body { background:#f8fbf9; text-align:center; padding:0; color:#222; }
     
+    /* STICKY NAVBAR - Same as index */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: #1a2a4a;
+      color: white;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 3px solid #16a34a; /* Green line */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .navbar .logo { font-size: 20px; font-weight: bold; }
+    .navbar .links a { 
+      color: white; 
+      text-decoration: none; 
+      margin: 0 12px; 
+      font-weight: 600; 
+    }
+    .navbar .links a:hover, .navbar .links a.active { color: #16a34a; }
+    @media(max-width:600px){ .navbar .links a{margin:0 6px; font-size:14px;} }
+
     header { background:linear-gradient(135deg,#0e7c4b,#16a34a); color:white; padding:40px 20px; }
     header h1 { font-size:2em; margin-bottom:10px; }
     
@@ -54,7 +83,15 @@
     }
     .btn-back:hover {background:#0e7c4b;}
     
-    footer {background:#0e7c4b; color:white; text-align:center; padding:25px 20px; margin-top:40px;}
+    /* FOOTER WITH SOCIAL MEDIA - Same as index */
+    footer {background:#0e7c4b; color:white; text-align:center; padding:30px 20px; margin-top:40px;}
+    .social-icons a {
+      color: white;
+      font-size: 24px;
+      margin: 0 12px;
+      text-decoration: none;
+    }
+    .social-icons a:hover { color: #ffb700; }
     
     /* LIGHTBOX */
     #lightbox {
@@ -65,6 +102,19 @@
   </style>
 </head>
 <body>
+
+  <!-- STICKY NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">AL-SALAM</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="index.html#donate">Donate</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
   <header>
     <h1>AL-SALAM GALLERY</h1>
     <p>Our Work in Inanda, South Africa</p>
@@ -88,8 +138,15 @@
     <a href="index.html" class="btn-back">← Back to Home</a>
   </div>
 
+  <!-- FOOTER WITH SOCIAL MEDIA -->
   <footer>
-    <p>© 2026 AL-SALAM | The Peace | Inanda, South Africa</p>
+    <h3 style="margin-bottom:15px;">Follow Us</h3>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/27627165789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p style="margin-top:20px;">© 2026 AL-SALAM | The Peace | Inanda, South Africa</p>
     <p>May Allah accept this sadaqah jariyah</p>
   </footer>
 
