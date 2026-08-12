@@ -25,6 +25,27 @@
     * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, sans-serif;}
     body {background:#f8fbf9; color:#222; line-height:1.7;}
     img {max-width:100%; height:auto; cursor:pointer; border-radius:8px;}
+.top-banner {
+  background: #0d6efd; /* AL-SALAM blue */
+  color: white;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.banner-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: slide-left 20s linear infinite;
+}
+
+@keyframes slide-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
     
     /* 2. STICKY NAVBAR - Dark blue like you wanted */
     .navbar {
