@@ -168,6 +168,38 @@
       background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000; cursor:pointer; padding:20px;
     }
     #lightbox-img {max-width:90%; max-height:90%; border-radius:10px;}
+    .photo-slider {
+  width: 100%;
+  overflow: hidden;
+  background: #f8f9fa;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  gap: 15px;
+  width: max-content;
+  animation: slide-bounce 12s ease-in-out infinite;
+}
+
+.slider-track img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+@keyframes slide-bounce {
+  0%   { transform: translateX(0); }           /* Start left */
+  50%  { transform: translateX(calc(-100% + 100vw)); } /* Move right */
+  100% { transform: translateX(0); }           /* Come back left */
+}
+
+.photo-slider:hover .slider-track {
+  animation-play-state: paused;
+  }
   </style>
 </head>
 <body>
@@ -218,16 +250,11 @@
       </div>
 <div class="photo-slider">
   <div class="slider-track">
-    <img src="D1.jpg" alt="Feeding children Inanda">
-    <img src="D7.jpg" alt="Food distribution Bhambayi">
-    <img src="D9.jpg" alt="Serving hot meals">
-    
-    <!-- Duplicate for smooth infinite loop -->
-    <img src="images/D1.jpg" alt="Feeding children Inanda">
-    <img src="images/D7.jpg" alt="Food distribution Bhambayi">
-    <img src="images/D9.jpg">
-      </div>
-      </div>
+    <img src="images/D1.jpg" alt="Feeding children">
+    <img src="images/D7.jpg" alt="Food distribution">
+    <img src="images/D9.jpg" alt="Serving hot meals">
+  </div>
+</div>
       <div class="card">
         <h3>CLEAN WATER</h3>
         <p>"And We made from water every living thing"</p>
