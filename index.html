@@ -16,12 +16,47 @@
   <meta property="og:image" content="https://0671271038.github.io/AL-SALAM/D1.jpg">
   <meta property="og:url" content="https://0671271038.github.io/AL-SALAM">
   
+  <!-- SOCIAL ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
   <style>
     /* RESET + BASE */
+    html { scroll-behavior: smooth; } /* 1. SMOOTH SCROLLING */
     * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, sans-serif;}
     body {background:#f8fbf9; color:#222; line-height:1.7;}
     img {max-width:100%; height:auto; cursor:pointer; border-radius:8px;}
     
+    /* 2. STICKY NAVBAR - Dark blue like you wanted */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: #1a2a4a;
+      color: white;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 3px solid #16a34a; /* Green line */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .navbar .logo { font-size: 20px; font-weight: bold; }
+    .navbar .links a { 
+      color: white; 
+      text-decoration: none; 
+      margin: 0 12px; 
+      font-weight: 600; 
+    }
+    .navbar .links a:hover { color: #16a34a; }
+    @media(max-width:600px){ .navbar .links a{margin:0 6px; font-size:14px;} }
+
+    /* 3. GREEN BAR FOR DONATE BUTTON */
+    .donate-bar {
+      background: #16a34a;
+      padding: 18px 20px;
+      text-align: center;
+    }
+
     /* HEADER */
     header {background:linear-gradient(135deg,#0e7c4b,#16a34a); color:white; text-align:center; padding:40px 20px;}
     .brand {display:flex; align-items:center; justify-content:space-between; max-width:700px; margin:0 auto 10px; flex-wrap:wrap;}
@@ -49,7 +84,7 @@
     /* BUTTONS */
     .btn {display:inline-block; background:#16a34a; color:white; padding:12px 24px; border-radius:8px; text-decoration:none; margin-top:15px; font-weight:bold; transition:0.3s;}
     .btn:hover {background:#0e7c4b;}
-    .btn-donate-main {background:#ffb700; color:#000; font-size:1.1em; padding:16px 32px; margin:30px auto; display:block; width:fit-content; text-align:center;}
+    .btn-donate-main {background:#ffb700; color:#000; font-size:1.1em; padding:16px 32px; margin:0 auto; display:inline-block; width:fit-content; text-align:center;}
     .btn-donate-main:hover {background:#e6a500;}
 
     /* SECTIONS */
@@ -58,7 +93,15 @@
     .about-grid {display:grid; grid-template-columns:1fr; gap:20px; margin-top:30px;}
     @media(min-width:700px){ .about-grid {grid-template-columns:repeat(3,1fr);} }
     
-    footer {background:#0e7c4b; color:white; text-align:center; padding:25px 20px; margin-top:40px;}
+    /* 4. FOOTER WITH SOCIAL MEDIA - Green theme */
+    footer {background:#0e7c4b; color:white; text-align:center; padding:30px 20px; margin-top:40px;}
+    .social-icons a {
+      color: white;
+      font-size: 24px;
+      margin: 0 12px;
+      text-decoration: none;
+    }
+    .social-icons a:hover { color: #ffb700; }
 
     /* LIGHTBOX */
     #lightbox {
@@ -70,7 +113,19 @@
 </head>
 <body>
   
-  <header>
+  <!-- STICKY NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">AL-SALAM</div>
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header id="home">
     <div class="brand">
       <span class="icon">☪️</span>
       <h1>AL-SALAM</h1>
@@ -85,13 +140,13 @@
     <p><strong>Based in Inanda, South Africa</strong></p>
   </header>
 
-  <div class="container">
-    
-    <!-- DONATE BUTTON -->
-    <a href="https://wa.me/27627165789" class="btn btn-donate-main">DONATE NOW</a>
+  <!-- GREEN BAR WITH DONATE BUTTON -->
+  <div class="donate-bar">
+    <a href="#donate" class="btn btn-donate-main">DONATE NOW</a>
+  </div>
 
+  <div class="container">
     <div class="causes">
-      
       <div class="card">
         <h3>FEED THE HUNGRY</h3>
         <p>"And they give food in spite of love for it to the needy, the orphan, and the captive"</p>
@@ -129,7 +184,7 @@
       </div>
     </div>
 
-    <a href="gallery.html" class="btn btn-donate-main">View Gallery</a>
+    <a href="gallery.html" class="btn btn-donate-main" style="margin-top:30px;">View Gallery</a>
 
     <div class="notice">
       <strong>Important Notice</strong><br>
@@ -145,7 +200,7 @@
       <p><strong>Account No:</strong> 63009990549</p>
       <p><em>Use your name or Company as reference. WhatsApp proof to 062 716 5789</em></p>
       
-      <h2 style="color:#0e7c4b; margin-top:25px;">Contact Us</h2>
+      <h2 style="color:#0e7c4b; margin-top:25px;" id="contact">Contact Us</h2>
       <p><strong>WhatsApp or Call:</strong> <a href="https://wa.me/27627165789" style="color:#0e7c4b;">062 716 5789</a></p>
       <p><strong>Email:</strong> <a href="mailto:salamhelp26@gmail.com" style="color:#0e7c4b;">salamhelp26@gmail.com</a></p>
     </div>
@@ -180,8 +235,15 @@
     <p style="margin:0; color:#555; font-size:16px;">Chief Executive Officer</p>
   </section>
 
+  <!-- FOOTER WITH SOCIAL MEDIA -->
   <footer>
-    <p>© 2026 AL-SALAM | The Peace | Inanda, South Africa</p>
+    <h3 style="margin-bottom:15px;">Follow Us</h3>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/27627165789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p style="margin-top:20px;">© 2026 AL-SALAM | The Peace | Inanda, South Africa</p>
     <p>May Allah accept this sadaqah jariyah</p>
   </footer>
 
@@ -199,4 +261,4 @@
     });
   </script>
 </body>
-</html>
+          </html>
