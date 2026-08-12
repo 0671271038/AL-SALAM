@@ -1,37 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Gallery - AL-SALAM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - AL-SALAM | The Peace</title>
   <style>
-  footer {background:#0e7c4b; color:white; text-align:center; padding:25px 20px; margin-top:40px;}
-
-
-    body { font-family: Arial; text-align: center; padding: 20px; }
-    img { width: 90%; max-width: 400px; margin: 10px; border-radius: 10px; }
-    a { color: blue; text-decoration: underline; }
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, sans-serif;}
+    body { background:#f8fbf9; text-align:center; padding:0; color:#222; }
+    
+    header { background:linear-gradient(135deg,#0e7c4b,#16a34a); color:white; padding:40px 20px; }
+    header h1 { font-size:2em; margin-bottom:10px; }
+    
+    .container { max-width:1200px; margin:auto; padding:30px 20px; }
+    
+    /* RESPONSIVE GALLERY GRID */
+    .gallery {
+      display:grid;
+      grid-template-columns:1fr; /* Phone: 1 column */
+      gap:15px;
+    }
+    @media(min-width:600px){ 
+      .gallery { grid-template-columns:repeat(2,1fr); } /* Tablet: 2 columns */
+    }
+    @media(min-width:900px){ 
+      .gallery { grid-template-columns:repeat(3,1fr); } /* PC: 3 columns */
+    }
+    @media(min-width:1200px){ 
+      .gallery { grid-template-columns:repeat(4,1fr); } /* Big PC: 4 columns */
+    }
+    
+    .gallery img {
+      width:100%;
+      height:250px;
+      object-fit:cover; /* keeps all images same size */
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:transform 0.3s;
+      cursor:pointer;
+    }
+    .gallery img:hover {
+      transform:scale(1.03);
+    }
+    
+    .btn-back {
+      display:inline-block; 
+      background:#16a34a; 
+      color:white; 
+      padding:12px 24px; 
+      border-radius:8px; 
+      text-decoration:none; 
+      margin:30px 0; 
+      font-weight:bold;
+    }
+    .btn-back:hover {background:#0e7c4b;}
+    
+    footer {background:#0e7c4b; color:white; text-align:center; padding:25px 20px; margin-top:40px;}
+    
+    /* LIGHTBOX */
+    #lightbox {
+      display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+      background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000; cursor:pointer; padding:20px;
+    }
+    #lightbox-img {max-width:90%; max-height:90%; border-radius:10px;}
   </style>
 </head>
 <body>
-  <h1 style="color: green;">AL-SALAM GALLERY</h1>
+  <header>
+    <h1>AL-SALAM GALLERY</h1>
+    <p>Our Work in Inanda, South Africa</p>
+  </header>
   
-<img src="D1.jpg" alt="AL-SALAM Activity"></a>
-<img src="D2.jpg" alt="AL-SALAM Activity">
-<img src="D3.jpg" alt="AL-SALAM Activity">
-<img src="D4.jpg" alt="AL-SALAM Activity">
-<img src="²nd D.jpg" alt="AL-SALAM Activity">
-<img src="D7.jpg" alt="AL-SALAM Activity">
-<img src="D8.jpg" alt="AL-SALAM Activity">
-<img src="²nd.jpg" alt="AL-SALAM Activity">
-<img src="Bread.jpg" alt="AL-SALAM Activity">
-<img src="Mt.jpg" alt="AL-SALAM Activity">
-<img src="RaH.jpg" alt="AL-SALAM Activity">
-  
-  <br><br>
-  <a href="index.html">← Back to Home</a>
-<footer>
-  <p>© 2025 AL-SALAM | The Peace | Inanda, South Africa</p>
-  <p>May Allah accept this sadaqah jariyah</p>
-</footer>
+  <div class="container">
+    <div class="gallery">
+      <img src="D1.jpg" alt="AL-SALAM Feeding Program">
+      <img src="D2.jpg" alt="AL-SALAM Community Work">
+      <img src="D3.jpg" alt="AL-SALAM Activity">
+      <img src="D4.jpg" alt="AL-SALAM Activity">
+      <img src="²nd D.jpg" alt="AL-SALAM Activity">
+      <img src="D7.jpg" alt="AL-SALAM Activity">
+      <img src="D8.jpg" alt="AL-SALAM Activity">
+      <img src="²nd.jpg" alt="AL-SALAM Activity">
+      <img src="Bread.jpg" alt="Bread Distribution">
+      <img src="Mt.jpg" alt="AL-SALAM Activity">
+      <img src="RaH.jpg" alt="AL-SALAM Activity">
+    </div>
+    
+    <a href="index.html" class="btn-back">← Back to Home</a>
+  </div>
 
+  <footer>
+    <p>© 2026 AL-SALAM | The Peace | Inanda, South Africa</p>
+    <p>May Allah accept this sadaqah jariyah</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img">
+  </div>
+
+  <script>
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.onclick = () => {
+        document.getElementById('lightbox').style.display = 'flex';
+        document.getElementById('lightbox-img').src = img.src;
+      }
+    });
+  </script>
 </body>
 </html>
