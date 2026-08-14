@@ -303,6 +303,32 @@ body {
   margin: 0;
   padding: 0;
 }
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 300%; /* 3 photos = 300% */
+  animation: slideRight 15s forwards; /* 3 x 5sec = 15sec total */
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@keyframes slideRight {
+  0%   { transform: translateX(0%); }     /* Photo 1 for 0-5s */
+  33%  { transform: translateX(0%); }     
+  34%  { transform: translateX(-100%); }   /* Slide to Photo 2 */
+  66%  { transform: translateX(-100%); }   /* Photo 2 for 5-10s */
+  67%  { transform: translateX(-200%); }   /* Slide to Photo 3 */
+ 100% { transform: translateX(-200%); }   /* Photo 3 for 10-15s and stops */
+}
+    
   </style>
 </head>
 <body>
@@ -358,7 +384,13 @@ body {
         <p><b>- Quran 21:30</b></p>
         <p>Boreholes, water tanks, and water distribution for communities without access.</p>
       </div>
-
+<div class="slider">
+  <div class="slides">
+    <img src="W1.jpg" alt="Photo 1">
+    <img src="W2.jpg" alt="Photo 2">
+    <img src="W3.jpg" alt="Photo 3">
+  </div>
+</div>
       <div class="card">
         <h3>TEACH MADRESSAH</h3>
         <p>“Whoever travels a path seeking knowledge, Allah makes easy for him the path to Paradise” — Prophet Muhammad ﷺ</p>
