@@ -18,6 +18,99 @@
   
   <!-- SOCIAL ICONS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* Hamburger Button */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px; /* change to left: 20px if you want it on left */
+  z-index: 1000;
+  background: #2E8B57; /* your brand color */
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* hidden by default */
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  padding: 80px 20px 20px;
+  z-index: 999;
+}
+.mobile-menu.active {
+  right: 0; /* slides in when active */
+}
+.mobile-menu a {
+  display: block;
+  padding: 15px 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+}
+.mobile-menu a:hover {
+  color: #2E8B57;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 998;
+}
+.overlay.active { display: block; }
+</style>
+
+<!-- Hamburger Button -->
+<button class="menu-toggle" id="menuBtn">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- Mobile Menu Links -->
+<div class="overlay" id="overlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="team.html">Our Team</a>
+  <a href="programs.html">Programs</a>
+  <a href="donate.html">Donate</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const overlay = document.getElementById('overlay');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+  mobileMenu.classList.remove('active');
+  overlay.classList.remove('active');
+});
+</script>
+
   
   <style>
     /* RESET + BASE */
