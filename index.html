@@ -325,16 +325,43 @@ body {
   66%  { transform: translateX(-200%); }
  100%  { transform: translateX(0%); }
 }
-    
+    .masjid-header {
+  background: linear-gradient(to bottom, #0f9d58, #0b7a45);
+  color: white;
+  text-align: center;
+  padding: 30px 20px 100px; /* 100px bottom for dome space */
+  position: relative;
+  
+  /* This makes the masjid domes */
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% 85%, 
+    83% 100%, 
+    66% 85%, 
+    50% 100%, 
+    34% 85%, 
+    17% 100%, 
+    0 85%
+  );
+    }
   </style>
 </head>
 <body>
+
   <div class="top-banner">
   <div class="banner-text">
     🕌 Feeding 60+ children daily in Inanda • Help us reach 150+ this month • Donate now and earn Sadaqah Jariyah • JazakAllah Khair
   </div>
 </div>
-
+  <div class="masjid-header">
+  <div>☪️ AL-SALAM 🕌</div>
+  <div><i>The Peace</i></div>
+  <div>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <div>In the Name of Allah...</div>
+  <div><i>Feeding. Watering. Teaching...</i></div>
+  <div><b>Based in Inanda, South Africa</b></div>
+  </div>
 
   <header id="home">
     <div class="brand">
