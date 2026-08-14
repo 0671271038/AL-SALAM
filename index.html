@@ -484,30 +484,19 @@ overlay.addEventListener('click', () => {
 <div class="team-section">
   <h2 class="team-title">Our Leadership Team</h2>
 
-  <!-- CEO TOP -->
-  <div class="ceo-card">
-    <div class="team-card" style="margin: 0 auto;">
-      <img src="ceo-photo.jpg" alt="CEO Name">
-      <h3>Your Full Name</h3>
-      <p class="role">Founder & CEO</p>
-      <p class="bio">Your 2-3 line bio here about peace and leadership.</p>
-    </div>
-  </div>
-
   <!-- OTHER 2 BELOW - OPPOSITE -->
   <div class="team-row">
     <div class="team-card">
-      <img src="partner1-photo.jpg" alt="Partner 1 Name">
-      <h3>Partner 1 Name</h3>
+      <img src="Rohan.jpg" alt="Partner 1 Name">
+      <h3>Rohan Mdletshe</h3>
       <p class="role">Secretary</p>
-      <p class="bio">Short bio about partner 1 here.</p>
     </div>
 
     <div class="team-card">
-      <img src="partner2-photo.jpg" alt="Partner 2 Name">
-      <h3>Partner 2 Name</h3>
+      <img src="Treasurer.jpg" alt="Partner 2 Name">
+      <h3>N</h3>
       <p class="role">Treasurer</p>
-      <p class="bio">Short bio about partner 2 here.</p>
+    
     </div>
   </div>
 </div>
@@ -552,48 +541,6 @@ overlay.addEventListener('click', () => {
 </style>
 
 <footer>
-  <!-- your existing footer content -->
 
-  <div class="footer-toggle">
-    <a href="#" id="view-desktop">View as Desktop</a> | 
-    <a href="#" id="view-mobile">View as Mobile</a>
-  </div>
-</footer>
-
-<script>
-// Check if user already chose a view
-function setViewport(width) {
-  let viewport = document.querySelector('meta[name=viewport]');
-  if (!viewport) {
-    viewport = document.createElement('meta');
-    viewport.name = "viewport";
-    document.head.appendChild(viewport);
-  }
-  viewport.content = "width=" + width + ", initial-scale=1";
-  localStorage.setItem('siteView', width); // remember choice
-}
-
-// On page load, check saved preference
-window.addEventListener('load', function() {
-  let savedView = localStorage.getItem('siteView');
-  if (savedView) {
-    setViewport(savedView);
-  }
-});
-
-// Button clicks
-document.getElementById('view-desktop').addEventListener('click', function(e){
-  e.preventDefault();
-  setViewport(1200); // desktop width
-  location.reload();
-});
-
-document.getElementById('view-mobile').addEventListener('click', function(e){
-  e.preventDefault();
-  setViewport('device-width'); // back to mobile
-  localStorage.removeItem('siteView');
-  location.reload();
-});
-</script>
 </body>
           </html>
