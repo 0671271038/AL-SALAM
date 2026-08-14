@@ -451,36 +451,68 @@ overlay.addEventListener('click', () => {
 </footer>
 
 <script>
-document.getElementById('desktop-toggle').addEventListener('click', function(e){
-  e.preventDefault();
-  // This adds a query parameter so your site knows to load desktop CSS
-  window.location.href = window.location.pathname + "?view=desktop";
-});
-</script>
-
 <style>
-.footer-bottom {
+.footer-toggle {
   text-align: center;
-  padding: 15px;
+  padding: 20px 10px;
+  background: #f5f5f5;
+  border-top: 1px solid #ddd;
   font-size: 14px;
 }
-.footer-bottom a {
-  color: #2E8B57; /* change to your brand color */
+.footer-toggle a {
+  color: #2E8B57; /* change to your AL-SALAM brand color */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+.footer-toggle a:hover {
   text-decoration: underline;
 }
 </style>
-  <!-- Lightbox -->
-  <div id="lightbox" onclick="this.style.display='none'">
-    <img id="lightbox-img">
-  </div>
 
-  <script>
-    document.querySelectorAll('img').forEach(img => {
-      img.onclick = () => {
-        document.getElementById('lightbox').style.display = 'flex';
-        document.getElementById('lightbox-img').src = img.src;
-      }
-    });
-  </script>
+<footer>
+  <!-- your existing footer content -->
+
+  <div class="footer-toggle">
+    <a href="#" id="view-desktop">View as Desktop</a> | 
+    <a href="#" id="view-mobile">View as Mobile</a>
+  </div>
+</footer>
+
+<script>
+// Check if user already chose a view
+function setViewport(width) {
+  let viewport = document.querySelector('meta[name=viewport]');
+  if (!viewport) {
+    viewport = document.createElement('meta');
+    viewport.name = "viewport";
+    document.head.appendChild(viewport);
+  }
+  viewport.content = "width=" + width + ", initial-scale=1";
+  localStorage.setItem('siteView', width); // remember choice
+}
+
+// On page load, check saved preference
+window.addEventListener('load', function() {
+  let savedView = localStorage.getItem('siteView');
+  if (savedView) {
+    setViewport(savedView);
+  }
+});
+
+// Button clicks
+document.getElementById('view-desktop').addEventListener('click', function(e){
+  e.preventDefault();
+  setViewport(1200); // desktop width
+  location.reload();
+});
+
+document.getElementById('view-mobile').addEventListener('click', function(e){
+  e.preventDefault();
+  setViewport('device-width'); // back to mobile
+  localStorage.removeItem('siteView');
+  location.reload();
+});
+</script>
 </body>
           </html>
