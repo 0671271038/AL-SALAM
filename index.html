@@ -442,7 +442,33 @@ overlay.addEventListener('click', () => {
     <p style="margin-top:20px;">© 2026 AL-SALAM | The Peace | Inanda, South Africa</p>
     <p>May Allah accept this sadaqah jariyah</p>
   </footer>
+<footer>
+  <!-- your existing footer content -->
 
+  <div class="footer-bottom">
+    <a href="#" id="desktop-toggle">View as Desktop</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('desktop-toggle').addEventListener('click', function(e){
+  e.preventDefault();
+  // This adds a query parameter so your site knows to load desktop CSS
+  window.location.href = window.location.pathname + "?view=desktop";
+});
+</script>
+
+<style>
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+.footer-bottom a {
+  color: #2E8B57; /* change to your brand color */
+  text-decoration: underline;
+}
+</style>
   <!-- Lightbox -->
   <div id="lightbox" onclick="this.style.display='none'">
     <img id="lightbox-img">
