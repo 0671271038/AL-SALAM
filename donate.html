@@ -7,68 +7,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <style>
-  ...your CSS here...
-  </style>
-  </head>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0fdf4;
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-    }
-    .form-container {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      max-width: 450px;
-      width: 100%;
-      border-top: 5px solid #059669;
-    }
-    h2 {
-      color: #059669;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-      color: #065f46;
-    }
-    input, select {
-      width: 100%;
-      padding: 12px;
-      margin-top: 5px;
-      border: 2px solid #d1fae5;
-      border-radius: 8px;
-      box-sizing: border-box;
-      font-size: 16px;
-    }
-    input:focus, select:focus {
-      border-color: #059669;
-      outline: none;
-    }
-    button {
-      width: 100%;
-      padding: 14px;
-      margin-top: 20px;
-      background: #059669;
-      color: white;
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Donate to AL-SALAM</title>
-<style>
-body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
-.container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 10px; }
-h1 { color: #2d6a4f; text-align: center; }
-input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
-button { width: 100%; padding: 15px; background: #2d6a4f; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
-button:hover { background: #1b4332; }
-</style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0fdf4;
+    margin: 0;
+    padding: 0; /* removed padding */
+  }
+  .form-container {
+    background: white;
+    padding: 25px 20px;
+    margin: 0; /* no margin */
+    border-radius: 0; /* no curve on mobile */
+    box-shadow: none; /* no shadow on mobile */
+    width: 100%; /* take full width */
+    min-height: 100vh; /* take full screen height */
+    border-top: 5px solid #059669;
+    box-sizing: border-box;
+  }
+  h2 { 
+    color: #059669; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 24px; /* bigger title */
+  }
+  label { 
+    display: block; 
+    margin-top: 15px; 
+    font-weight: bold; 
+    color: #065f46; 
+    font-size: 16px; /* bigger text */
+  }
+  input, select { 
+    width: 100%; 
+    padding: 14px; /* bigger tap area */
+    margin-top: 5px; 
+    border: 2px solid #d1fae5; 
+    border-radius:
 </head>
 <body>
 <div class="container">
