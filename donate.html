@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate to AL-SALAM</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+.container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 10px; }
+h1 { color: #2d6a4f; text-align: center; }
+input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+button { width: 100%; padding: 15px; background: #2d6a4f; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+button:hover { background: #1b4332; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Donate to AL-SALAM</h1>
+<form action="https://formsubmit.co/salamhelp26@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="New AL-SALAM Donation">
+  <input type="hidden" name="_next" value="https://0671271038.github.io/thankyou.html">
+  <input type="hidden" name="_captcha" value="false">
+
+  <label>Donation Type</label>
+  <select name="Donation Type" required>
+    <option value="">Select</option>
+    <option>Sadaqah</option>
+    <option>Zakat</option>
+    <option>Lillah</option>
+<option>Feeding Programme</option>
+<option >Water Project</option>
+<option>MASJID Building</option>
+  </select>
+
+  <label>Full Name</label>
+  <input type="text" name="Name" required>
+
+  <label>Email</label>
+  <input type="email" name="Email" required>
+
+  <label>Amount (R)</label>
+  <input type="number" name="Amount" required>
+
+  <label>Message</label>
+  <textarea name="Message"></textarea>
+
+  <button type="submit">Donate Now</button>
+</form>
+</div>
+</body>
+</html>
