@@ -4,63 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donate - AL-SALAM</title>
-
   <style>
-    :root {
-      --alsalam-green: #0f9d58;
-      --alsalam-dark: #0b7a45;
-      --alsalam-light: #e8f5e9;
-      --text-dark: #333;
-    }
-    body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #fff; padding: 20px; color: var(--text-dark); }
-    h2 { color: var(--alsalam-green); text-align: center; margin-bottom: 25px; font-size: 24px; }
-    form { background: var(--alsalam-light); padding: 25px; border-radius: 15px; border: 2px solid var(--alsalam-green); max-width: 500px; margin: 0 auto; box-shadow: 0 4px 12px rgba(15, 157, 88, 0.15); }
-    label { display: block; font-weight: bold; margin: 15px 0 5px 0; color: var(--alsalam-dark); }
-    label span { color: red; }
-    input[type="text"], input[type="email"], input[type="number"], select {
-      width: 100%; padding: 12px; border: 2px solid #ccc; border-radius: 8px; font-size: 16px; box-sizing: border-box;
-    }
-    input:focus, select:focus { border-color: var(--alsalam-green); outline: none; box-shadow: 0 0 0 3px rgba(15, 157, 88, 0.2); }
-    .donate-btn {
-      width: 100%; background: var(--alsalam-green); color: white; font-size: 18px; font-weight: bold; padding: 15px;
-      border: none; border-radius: 50px; cursor: pointer; margin-top: 20px; box-shadow: 0 4px 15px rgba(15, 157, 88, 0.4);
-    }
-    .donate-btn:hover { background: var(--alsalam-dark); transform: translateY(-2px); }
+    body { font-family: Arial; background: #f0f8f5; padding: 20px; text-align: center; }
+    .box { background: white; max-width: 400px; margin: auto; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+    h1 { color: #0f9d58; }
+    label { display: block; text-align: left; margin-top: 15px; font-weight: bold; color: #0f9d58; }
+    input { width: 100%; padding: 12px; margin-top: 5px; border: 2px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+    button { background: #0f9d58; color: white; border: none; padding: 15px; width: 100%; border-radius: 8px; font-size: 16px; font-weight: bold; margin-top: 20px; cursor: pointer; }
+    button:hover { background: #0b7a43; }
   </style>
 </head>
 <body>
-
-  <h2>🕌 Donate to AL-SALAM</h2>
-  
-  <form action="https://formsubmit.co/0c913fa7312ca9567c96832ace8e19d8" method="POST">
-  <form action="https://formsubmit.co/salamhelp26@email.com" method="POST">
-  <input type="hidden" name="_next" value="thankyou.html">
-  <input type="hidden" name="_subject" value="New Donation - AL-SALAM">
-  <input type="hidden" name="_captcha" value="false">
-  
-  <label>Name</label>
-  <input type="text" name="Name" required>
-
-  <label>Email</label>
-  <input type="email" name="Email" required>
-
-  <label>Amount R</label>
-  <input type="number" name="Amount" required>
-
-  <button type="submit">Donate Now</button>
-
-    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
-  
-  <!-- ADD THIS LINE -->
-  <input type="hidden" name="_next" value="thankyou.html">
-
-  <!-- the rest of your inputs -->
-  <input type="text" name="Name">
-  ...
-  <button type="submit">Donate</button>
-</form>
+  <div class="box">
+    <h1>🕌 Donate to AL-SALAM</h1>
+    <p>Feeding 60+ children daily in Inanda</p>
     
-</form>
+    <!-- IMPORTANT: Replace YOUR_EMAIL_HERE with your real email -->
+    <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+      
+      <!-- These 3 lines make it work -->
+      <input type="hidden" name="_next" value="thankyou.html">
+      <input type="hidden" name="_subject" value="New AL-SALAM Donation">
+      <input type="hidden" name="_captcha" value="false">
 
+      <label>Name</label>
+      <input type="text" name="Name" required>
+
+      <label>Email</label>
+      <input type="email" name="Email" required>
+
+      <label>Amount R</label>
+      <input type="number" name="Amount" placeholder="50" required>
+
+      <button type="submit">Donate Now</button>
+    </form>
+  </div>
 </body>
 </html>
