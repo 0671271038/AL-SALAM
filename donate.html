@@ -21,26 +21,36 @@ button:hover { background: #1b4332; }
   <input type="hidden" name="_next" value="/thankyou.html">
   <input type="hidden" name="_captcha" value="false">
   <label>Donation Type</label>
-  <select name="Donation Type" required>
-    <option value="">Select</option>
-    <option>Sadaqah</option>
-    <option>Zakat</option>
-    <option>Lillah</option>
-<option>Feeding Programme</option>
-<option >Water Project</option>
-<option>MASJID Building</option>
-  </select>
+  <label>Donation Type</label>
+<select name="donation_type" required>
+  <option value="">-- Select Donation Type --</option>
+  <option value="Zakat">Zakat</option>
+  <option value="Sadaqah">Sadaqah</option>
+  <option value="Lillah">Lillah</option>
+  <option value="FeedingProgramme">Feeding Programme</option>
+  <option value="Water Project">Water Project</option>
+  <option value="Masjid Build">Masjid Build</option>
+</select>
 
-  <label>Full Name</label>
-  <input type="text" name="Name" required>
+<label>Full Name</label>
+<input type="text" name="name" placeholder="Full Name" required>
 
-  <label>Email</label>
-  <input type="email" name="Email" required>
+<label>Email</label>
+<input type="email" name="email" placeholder="Email" required>
 
-  <label>Amount (R)</label>
-  <input type="number" name="Amount" required>
-
+<label>Amount (R)</label>
+<input type="number" name="amount" placeholder="Amount (R)" required>
   <label>Message</label>
+
+<label>Masjid Build</label>
+<input type="text" name="name" placeholder="Masjid Build"required>
+
+<label>Feeding Programme</label>
+<input type="text" name="name" placeholder="Feeding Programme"required>
+  
+<label>Feeding Programme</label>
+<input type="text" name="name" placeholder="Feeding Programme"required>
+  
   <textarea name="Message"></textarea>
 
   <a href="donate.html" class="btn btn-donate-main" style="margin-top:30px;">Donate Now</a>
