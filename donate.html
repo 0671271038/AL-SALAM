@@ -4,34 +4,129 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donate - AL-SALAM</title>
+
   <style>
-    body { font-family: Arial; background: #f0f8f5; padding: 20px; text-align: center; }
-    .box { background: white; max-width: 400px; margin: auto; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-    h1 { color: #0f9d58; }
-    label { display: block; text-align: left; margin-top: 15px; font-weight: bold; color: #0f9d58; }
-    input { width: 100%; padding: 12px; margin-top: 5px; border: 2px solid #ddd; border-radius: 8px; box-sizing: border-box; }
-    button { background: #0f9d58; color: white; border: none; padding: 15px; width: 100%; border-radius: 8px; font-size: 16px; font-weight: bold; margin-top: 20px; cursor: pointer; }
-    button:hover { background: #0b7a43; }
+    /* AL-SALAM Brand Colors */
+    :root {
+      --alsalam-green: #0f9d58;
+      --alsalam-dark: #0b7a45;
+      --alsalam-light: #e8f5e9;
+      --text-dark: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #fff;
+      padding: 20px;
+      color: var(--text-dark);
+    }
+
+    h2 {
+      color: var(--alsalam-green);
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    /* Form Box */
+    form {
+      background: var(--alsalam-light);
+      padding: 25px;
+      border-radius: 15px;
+      border: 2px solid var(--alsalam-green);
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(15, 157, 88, 0.15);
+    }
+
+    /* Labels */
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 15px 0 5px 0;
+      color: var(--alsalam-dark);
+    }
+
+    label span {
+      color: red; /* for the * */
+    }
+
+    /* Inputs + Select */
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+      transition: 0.3s;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: var(--alsalam-green);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(15, 157, 88, 0.2);
+    }
+
+    /* Donate Button - AL-SALAM style */
+    .donate-btn {
+      width: 100%;
+      background: var(--alsalam-green);
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px;
+      border: none;
+      border-radius: 50px; /* pill shape like SANZAF */
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(15, 157, 88, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .donate-btn:hover {
+      background: var(--alsalam-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(15, 157, 88, 0.6);
+    }
+
+    /* Mobile Friendly */
+    @media (max-width: 600px) {
+      form {
+        padding: 20px 15px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>🕌 Donate to AL-SALAM</h1>
-    <p>Feeding 60+ children daily in Inanda</p>
-    
-    <!-- IMPORTANT: Replace YOUR_EMAIL_HERE with your real email -->
-    <form action="https://formsubmit.co/salamhelp26@gmail.com" method="POST">
 
-  <!-- ADD THESE 4 LINES ONLY - Nothing else changes -->
-  <input type="hidden" name="_next" value="thankyou.html">
-  <input type="hidden" name="_subject" value="New AL-SALAM Donation">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_noverify" value="true">
+  <h2>🕌 Donate to AL-SALAM</h2>
+  
+  <form>
+    <label>Type of Donation <span>*</span></label>
+    <select name="type" required>
+      <option>Zakah</option>
+      <option>Sadaqah</option>
+      <option>Lillah</option>
+      <option>Feeding Programme</option>
+      <option>Water Project</option>
+      <option>Madrasah</option>
+    </select>
 
-  <!-- Everything else stays exactly like SANZAF -->
-  ... your name, email, amount inputs ...
-  <button type="submit">Donate Now</button>
-</form>
-  </div>
+    <label>Name <span>*</span></label>
+    <input type="text" name="name" required>
+
+    <label>Amount R<span>*</span></label>
+    <input type="number" name="amount" placeholder="e.g. 100" required>
+
+    <button type="submit" class="donate-btn">Donate Now</button>
+  </form>
+
 </body>
 </html>
