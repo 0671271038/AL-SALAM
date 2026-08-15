@@ -48,6 +48,18 @@
   <input type="number" name="Amount" required>
 
   <button type="submit">Donate Now</button>
+
+    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+  
+  <!-- ADD THIS LINE -->
+  <input type="hidden" name="_next" value="thankyou.html">
+
+  <!-- the rest of your inputs -->
+  <input type="text" name="Name">
+  ...
+  <button type="submit">Donate</button>
+</form>
+    
 </form>
 
 </body>
