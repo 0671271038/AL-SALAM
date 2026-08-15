@@ -21,23 +21,17 @@
     
     <!-- IMPORTANT: Replace YOUR_EMAIL_HERE with your real email -->
     <form action="https://formsubmit.co/salamhelp26@gmail.com" method="POST">
-      
-      <!-- These 3 lines make it work -->
-      <input type="hidden" name="_next" value="thankyou.html">
-      <input type="hidden" name="_subject" value="New AL-SALAM Donation">
-      <input type="hidden" name="_captcha" value="false">
 
-      <label>Name</label>
-      <input type="text" name="Name" required>
+  <!-- ADD THESE 4 LINES ONLY - Nothing else changes -->
+  <input type="hidden" name="_next" value="thankyou.html">
+  <input type="hidden" name="_subject" value="New AL-SALAM Donation">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_noverify" value="true">
 
-      <label>Email</label>
-      <input type="email" name="Email" required>
-
-      <label>Amount R</label>
-      <input type="number" name="Amount" placeholder="50" required>
-
-      <button type="submit">Donate Now</button>
-    </form>
+  <!-- Everything else stays exactly like SANZAF -->
+  ... your name, email, amount inputs ...
+  <button type="submit">Donate Now</button>
+</form>
   </div>
 </body>
 </html>
