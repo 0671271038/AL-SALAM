@@ -108,13 +108,25 @@
 
   <h2>🕌 Donate to AL-SALAM</h2>
   
-  <!-- ONLY 2 THINGS CHANGED HERE -->
-  <form action="https://formsubmit.co/salamhelp26@gmail.com" method="POST">
-    
-    <!-- ADD THESE 4 HIDDEN LINES -->
-    <input type="hidden" name="_next" value="thankyou.html">
-    <input type="hidden" name="_subject" value="New AL-SALAM Donation">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_noverify" value="true">
+  <form>
+    <label>Type of Donation <span>*</span></label>
+    <select name="type" required>
+      <option>Zakah</option>
+      <option>Sadaqah</option>
+      <option>Lillah</option>
+      <option>Feeding Programme</option>
+      <option>Water Project</option>
+      <option>Madrasah</option>
+    </select>
 
-    <label
+    <label>Name <span>*</span></label>
+    <input type="text" name="name" required>
+
+    <label>Amount R<span>*</span></label>
+    <input type="number" name="amount" placeholder="e.g. 100" required>
+
+    <button type="submit" class="donate-btn">Donate Now</button>
+  </form>
+
+</body>
+</html>
