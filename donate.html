@@ -28,7 +28,6 @@
       font-size: 24px;
     }
 
-    /* Form Box */
     form {
       background: var(--alsalam-light);
       padding: 25px;
@@ -39,7 +38,6 @@
       box-shadow: 0 4px 12px rgba(15, 157, 88, 0.15);
     }
 
-    /* Labels */
     label {
       display: block;
       font-weight: bold;
@@ -48,11 +46,11 @@
     }
 
     label span {
-      color: red; /* for the * */
+      color: red;
     }
 
-    /* Inputs + Select */
     input[type="text"],
+    input[type="email"],
     input[type="number"],
     select {
       width: 100%;
@@ -71,7 +69,6 @@
       box-shadow: 0 0 0 3px rgba(15, 157, 88, 0.2);
     }
 
-    /* Donate Button - AL-SALAM style */
     .donate-btn {
       width: 100%;
       background: var(--alsalam-green);
@@ -80,7 +77,7 @@
       font-weight: bold;
       padding: 15px;
       border: none;
-      border-radius: 50px; /* pill shape like SANZAF */
+      border-radius: 50px;
       cursor: pointer;
       margin-top: 20px;
       box-shadow: 0 4px 15px rgba(15, 157, 88, 0.4);
@@ -93,7 +90,6 @@
       box-shadow: 0 6px 20px rgba(15, 157, 88, 0.6);
     }
 
-    /* Mobile Friendly */
     @media (max-width: 600px) {
       form {
         padding: 20px 15px;
@@ -108,9 +104,15 @@
 
   <h2>🕌 Donate to AL-SALAM</h2>
   
-  <form>
+  <form action="https://formsubmit.co/salamhelp26@gmail.com" method="POST">
+    
+    <input type="hidden" name="_next" value="thankyou.html">
+    <input type="hidden" name="_subject" value="New AL-SALAM Donation">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_noverify" value="true">
+
     <label>Type of Donation <span>*</span></label>
-    <select name="type" required>
+    <select name="Type_of_Donation" required>
       <option>Zakah</option>
       <option>Sadaqah</option>
       <option>Lillah</option>
@@ -120,10 +122,13 @@
     </select>
 
     <label>Name <span>*</span></label>
-    <input type="text" name="name" required>
+    <input type="text" name="Name" required>
+
+    <label>Email <span>*</span></label>
+    <input type="email" name="Email" placeholder="e.g. you@gmail.com" required>
 
     <label>Amount R<span>*</span></label>
-    <input type="number" name="amount" placeholder="e.g. 100" required>
+    <input type="number" name="Amount" placeholder="e.g. 100" required>
 
     <button type="submit" class="donate-btn">Donate Now</button>
   </form>
