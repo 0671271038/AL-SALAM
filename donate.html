@@ -2,86 +2,91 @@
 <html lang="en">
 <head>
   <title>Donate - AL-SALAM FOUNDATION</title>
-  <head>
-  <title>Donate - AL-SALAM FOUNDATION</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #f0fdf4;
-    margin: 0;
-    padding: 0; /* removed padding */
-  }
-  .form-container {
-    background: white;
-    padding: 25px 20px;
-    margin: 0; /* no margin */
-    border-radius: 0; /* no curve on mobile */
-    box-shadow: none; /* no shadow on mobile */
-    width: 100%; /* take full width */
-    min-height: 100vh; /* take full screen height */
-    border-top: 5px solid #059669;
-    box-sizing: border-box;
-  }
-  h2 { 
-    color: #059669; 
-    text-align: center; 
-    margin-bottom: 20px; 
-    font-size: 24px; /* bigger title */
-  }
-  label { 
-    display: block; 
-    margin-top: 15px; 
-    font-weight: bold; 
-    color: #065f46; 
-    font-size: 16px; /* bigger text */
-  }
-  input, select { 
-    width: 100%; 
-    padding: 14px; /* bigger tap area */
-    margin-top: 5px; 
-    border: 2px solid #d1fae5; 
-    border-radius:
-      }
-    </style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0fdf4;
+      margin: 0;
+      padding: 15px;
+    }
+    .form-container {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto; /* THIS centers it */
+      border-top: 5px solid #059669;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h2 { 
+      color: #059669; 
+      text-align: center; 
+      margin: 0 0 20px 0;
+      font-size: 24px;
+    }
+    label { 
+      display: block; 
+      margin-top: 15px; 
+      font-weight: bold; 
+      color: #065f46; 
+      font-size: 16px;
+    }
+    input, select { 
+      width: 100%; 
+      padding: 14px;
+      margin-top: 5px; 
+      border: 2px solid #d1fae5; 
+      border-radius: 8px; 
+      font-size: 16px; 
+    }
+    button { 
+      width: 100%; 
+      padding: 16px;
+      margin-top: 25px; 
+      background: #059669; 
+      color: white; 
+      border: none; 
+      border-radius: 8px; 
+      font-size: 18px; 
+      font-weight: bold; 
+      cursor: pointer; 
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-<h1>Donate to AL-SALAM</h1>
-<form action="https://formsubmit.co/salamhelp26@gmail.com" method="POST">
-  <input type="hidden" name="_subject" value="New AL-SALAM Donation">
-  <input type="hidden" name="_next" value="/thankyou.html">
-  <input type="hidden" name="_captcha" value="false">
-  <label>Donation Type</label>
-  <label>Donation Type</label>
-<select name="donation_type" required>
-  <option value="">-- Select Donation Type --</option>
-  <option value="Zakat">Zakat</option>
-  <option value="Sadaqah">Sadaqah</option>
-  <option value="Lillah">Lillah</option>
-  <option value="FeedingProgramme">Feeding Programme</option>
-  <option value="Water Project">Water Project</option>
-  <option value="Masjid Build">Masjid Build</option>
-</select>
+  <div class="form-container">
+    <h2>Donate to AL-SALAM</h2>
+    
+    <form action="https://formsubmit.co/salamhelp26@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New AL-SALAM Donation">
+      <input type="hidden" name="_next" value="https://671271038.github.io/thankyou.html">
+      <input type="hidden" name="_captcha" value="false">
 
-<label>Full Name</label>
-<input type="text" name="name" placeholder="Full Name" required>
+      <label>Donation Type</label>
+      <select name="donation_type" required>
+        <option value="">-- Select Donation Type --</option>
+        <option value="Zakat">Zakat</option>
+        <option value="Sadaqah">Sadaqah</option>
+        <option value="Lillah">Lillah</option>
+      </select>
 
-<label>Email</label>
-<input type="email" name="email" placeholder="Email" required>
+      <label>Full Name</label>
+      <input type="text" name="name" placeholder="Full Name" required>
 
-<label>Amount (R)</label>
-<input type="number" name="amount" placeholder="Amount (R)" required>
-  <label>Message</label>
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Email" required>
 
+      <label>Amount (R)</label>
+      <input type="number" name="amount" placeholder="Amount (R)" required>
 
-  
-  <textarea name="Message"></textarea>
+      <label>Message</label>
+      <input type="text" name="message" placeholder="Optional message">
 
-
-  <a href="donate.html">Donate Now</a>
-</form>
-</div>
+      <button type="submit">Donate Now</button>
+    </form>
+  </div>
 </body>
 </html>
