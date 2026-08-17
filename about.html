@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO FOR GOOGLE -->
+  <title>AL-SALAM | The Peace - Islamic Charity in Inanda, Durban</title>
+  <meta name="description" content="AL-SALAM The Peace is an Islamic charity based in Inanda, Durban, South Africa. We focus on Sadaqah Jariyah, feeding programs, and community support. Donate and support our work for the sake of Allah.">
+  <meta name="keywords" content="AL-SALAM, Al Salam, The Peace, Islamic Charity, Sadaqah Jariyah, Inanda Charity, Durban Charity, South Africa, Feeding Program, Donate Lillah, Muslim Charity">
+  <meta name="author" content="AL-SALAM The Peace">
+  
+  <!-- GOOGLE WILL SHOW THIS WHEN PEOPLE SHARE THE LINK -->
+  <meta property="og:title" content="AL-SALAM | The Peace">
+  <meta property="og:description" content="Islamic Charity in Inanda, Durban. Sadaqah Jariyah & Feeding Programs">
+  <meta property="og:image" content="https://0671271038.github.io/AL-SALAM/D1.jpg">
+  <meta property="og:url" content="https://0671271038.github.io/AL-SALAM">
+  
+  <!-- SOCIAL ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+
+  /* Desktop Navbar Links */
+.navbar .desktop-menu a {
+  color: white !important;       /* force white */
+  text-decoration: none !important; /* remove underline */
+  font-weight: 500;
+  padding: 8px 0;
+  transition: 0.3s;
+}
+
+.navbar .desktop-menu a:visited {
+  color: white !important; /* keeps it white after clicking */
+}
+
+.navbar .desktop-menu a:hover {
+  color: #2E8B57 !important; /* green hover like AL-SALAM brand */
+  text-decoration: none !important;
+}
+
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 260px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  transition: right 0.3s ease;
+  padding: 80px 20px 20px; /* 80px pushes links below button */
+  z-index: 9998; /* just under button */
+}
+.mobile-menu.active {
+  right: 0; /* slides in when active */
+}
+.mobile-menu a {
+  display: block;
+  padding: 15px 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+}
+.mobile-menu a:hover {
+  color: #2E8B57;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 998;
+}
+.overlay.active { display: block; }
+</style>
+
+<!-- Hamburger Button -->
+<button class="menu-toggle" id="menuBtn">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- Mobile Menu Links -->
+<div class="overlay" id="overlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="team.html">Our Team</a>
+  <a href="classes.html">Programs</a>
+  <a href="donate.html">Donate</a>
+  <a href="contact.html">Contact</a>
+  <a href="classes.html">Madressah</a>a
+</nav>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const overlay = document.getElementById('overlay');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+  mobileMenu.classList.remove('active');
+  overlay.classList.remove('active');
+});
+</script>
+
+  
+  <style>
+    /* RESET + BASE */
+    html { scroll-behavior: smooth; } /* 1. SMOOTH SCROLLING */
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, sans-serif;}
+    body {background:#f8fbf9; color:#222; line-height:1.7;}
+    img {max-width:100%; height:auto; cursor:pointer; border-radius:8px;}
+.top-banner {
+  background: #0d6efd; /* AL-SALAM blue */
+  color: white;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.banner-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: slide-left 20s linear infinite;
+}
+
+@keyframes slide-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+    
+    /* 2. STICKY NAVBAR - Dark blue like you wanted */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: #1a2a4a;
+      color: white;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 3px solid #16a34a; /* Green line */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .navbar .logo { font-size: 20px; font-weight: bold; }
+    .navbar .links a { 
+      color: white; 
+      text-decoration: none; 
+      margin: 0 12px; 
+      font-weight: 600; 
+    }
+    .navbar .links a:hover { color: #16a34a; }
+    @media(max-width:600px){ .navbar .links a{margin:0 6px; font-size:14px;} }
+
+    /* 3. GREEN BAR FOR DONATE BUTTON */
+    .donate-bar {
+      background: #16a34a;
+      padding: 18px 20px;
+      text-align: center;
+    }
+
+    /* HEADER */
+    header {background:linear-gradient(135deg,#0e7c4b,#16a34a); color:white; text-align:center; padding:40px 20px;}
+    .brand {display:flex; align-items:center; justify-content:space-between; max-width:700px; margin:0 auto 10px; flex-wrap:wrap;}
+    .brand .icon {font-size:2.5em;}
+    .brand h1 {font-size:2.2em; margin:0 10px; flex:1; text-align:center;}
+    .subtitle {font-size:1.2em; margin-bottom:10px; font-weight:600; letter-spacing:1px;}
+    header p {font-size:1em; opacity:0.95;}
+    .slogan {font-style:italic; margin-top:10px; font-size:0.95em;}
+    .bismillah {font-size:1.2em; margin-bottom:8px;}
+    .bismillah-en {font-size:0.9em; opacity:0.9; margin-bottom:15px;}
+
+    /* CONTAINER */
+    .container {max-width:1100px; margin:auto; padding:30px 20px;}
+
+    /* CAUSES GRID - RESPONSIVE */
+    .causes {display:grid; grid-template-columns:1fr; gap:20px; margin-top:30px;}
+    @media(min-width:600px){ .causes {grid-template-columns:repeat(2,1fr);} }
+    @media(min-width:900px){ .causes {grid-template-columns:repeat(3,1fr);} }
+    
+    .card {background:white; border-radius:15px; padding:25px; box-shadow:0 4px 12px rgba(0,0,0,0.08); text-align:center; border-top:4px solid #16a34a; transition:transform 0.2s;}
+    .card:hover {transform:translateY(-5px);}
+    .card h3 {color:#0e7c4b; margin-bottom:10px; font-size:1.2em;}
+    .card p {font-size:0.95em;}
+
+    /* BUTTONS */
+    .btn {display:inline-block; background:#16a34a; color:white; padding:12px 24px; border-radius:8px; text-decoration:none; margin-top:15px; font-weight:bold; transition:0.3s;}
+    .btn:hover {background:#0e7c4b;}
+    .btn-donate-main {background:#ffb700; color:#000; font-size:1.1em; padding:16px 32px; margin:0 auto; display:inline-block; width:fit-content; text-align:center;}
+    .btn-donate-main:hover {background:#e6a500;}
+
+    /* SECTIONS */
+    .contact {background:#e8f5e9; padding:30px; border-radius:15px; margin-top:40px; text-align:center;}
+    .notice {background:#fff7ed; border-left:4px solid #f59e0b; padding:20px; margin:30px 0; border-radius:8px;}
+    .about-grid {display:grid; grid-template-columns:1fr; gap:20px; margin-top:30px;}
+    @media(min-width:700px){ .about-grid {grid-template-columns:repeat(3,1fr);} }
+
+    .photo-slider {
+  width: 100%;
+  overflow: hidden;
+  background: #f8f9fa;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  animation: slide-right 15s linear infinite;
+}
+
+.slider-track img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin: 0 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+@keyframes slide-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Pause on hover */
+.photo-slider:hover .slider-track {
+  animation-play-state: paused;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .slider-track img {
+    width: 250px;
+    height: 160px;
+  }
+}
+    /* 4. FOOTER WITH SOCIAL MEDIA - Green theme */
+    footer {background:#0e7c4b; color:white; text-align:center; padding:30px 20px; margin-top:40px;}
+    .social-icons a {
+      color: white;
+      font-size: 24px;
+      margin: 0 12px;
+      text-decoration: none;
+    }
+    .social-icons a:hover { color: #ffb700; }
+
+    /* LIGHTBOX */
+    #lightbox {
+      display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+      background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000; cursor:pointer; padding:20px;
+    }
+    #lightbox-img {max-width:90%; max-height:90%; border-radius:10px;}
+    .photo-slider {
+  width: 100%;
+  overflow: hidden;
+  background: #f8f9fa;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  gap: 15px;
+  width: max-content;
+  animation: slide-bounce 12s ease-in-out infinite;
+}
+
+.slider-track img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+@keyframes slide-bounce {
+  0%   { transform: translateX(0); }           /* Start left */
+  50%  { transform: translateX(calc(-100% + 100vw)); } /* Move right */
+  100% { transform: translateX(0); }           /* Come back left */
+}
+
+.photo-slider:hover .slider-track {
+  animation-play-state: paused;
+  }
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slideLoop 15s linear infinite;
+}
+
+.slides img {
+  width: 100%;
+}
+
+@keyframes slideLoop {
+ 0%   { transform: translateX(0%); }
+ 33%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-200%); }
+ 100%  { transform: translateX(0%); }
+}
+    .masjid-header {
+  background: linear-gradient(to bottom, #0f9d58, #0b7a45);
+  color: white;
+  text-align: center;
+  padding: 30px 20px 100px; /* 100px bottom for dome space */
+  position: relative;
+  
+  /* This makes the masjid domes */
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% 85%, 
+    83% 100%, 
+    66% 85%, 
+    50% 100%, 
+    34% 85%, 
+    17% 100%, 
+    0 85%
+  );
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-banner">
+  <div class="banner-text">
+    🕌 Feeding 60+ children daily in Inanda • Help us reach 150+ this month • Donate now and earn <b>Sadaqah</b> Jariyah • JazakAllah Khair
+  </div>
+</div>
+  
+
+  <header id="home">
+    <div class="brand">
+    
+  </header>
+
+  <!-- GREEN BAR WITH DONATE BUTTON -->
+  <div class="donate-bar">
+<a href="donate.html" class="btn btn-donate-main" style="margin-top:30px;">Donate Now</a>
+  </div>
+
+
+
+  <div class="container" id="about" style="background:white; border-radius:15px; margin-top:40px; padding:40px 20px;">
+    <h2 style="text-align:center; color:#0e7c4b; margin-bottom:20px;">About AL-SALAM</h2>
+    <p style="text-align:center; font-size:1.1em; max-width:800px; margin:auto;">
+      <strong>AL-SALAM | The Peace</strong> was founded in Inanda, South Africa by <b>Appa AISHA MTHEMBU</b> with one goal: 
+      To serve humanity for the sake of Allah ﷻ.
+    </p>
+    <div class="about-grid">
+      <div style="text-align:center;">
+        <h3 style="color:#0e7c4b;">Our Mission</h3>
+        <p>Feeding the hungry, providing clean water, teaching Qur'an, building masaajid, and caring for orphans.</p>
+      </div>
+      <div style="text-align:center;">
+        <h3 style="color:#0e7c4b;">Our Vision</h3>
+        <p>A community where no one sleeps hungry and every child knows Allah.</p>
+      </div>
+      <div style="text-align:center;">
+        <h3 style="color:#0e7c4b;">Our Promise</h3>
+        <p>100% of your donation goes directly to those in need. Full transparency.</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="contact" id="donate">Our Team</h2>
+  <!-- CEO Section -->
+  <section style="text-align:center; padding:40px 20px; background-color:#f8f8f8;">
+    <img src="ceo.jpg" alt="CEO of AL-SALAM" style="width:150px; height:150px; border-radius:50%; object-fit:cover; border:4px solid #2e7d32;">
+    <h3 style="margin-top:15px; margin-bottom:5px; font-size:22px; font-weight:bold; color:#2e7d32;">Aisha Mthembu</h3>
+    <h3 style="margin:0; color:#555; font-size:16px;">Chief Executive Officer</h3>
+  </section>
+  <style>
+.team-section {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+.team-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.ceo-card {
+  margin-bottom: 40px;
+}
+.team-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.team-card {
+  width: 250px;
+  text-align: center;
+}
+.team-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #2E8B57; /* green border - change to your brand color */
+  margin-bottom: 15px;
+}
+.team-card h3 {
+  margin: 5px 0;
+  font-size: 18px;
+}
+.team-card p.role {
+  color: #2E8B57;
+  font-weight: bold;
+  margin: 0;
+}
+.team-card p.bio {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+}
+@media (max-width: 600px) {
+  .team-row { gap: 20px; }
+}
+</style>
+
+<div class="team-section">
+  <!-- OTHER 2 BELOW - OPPOSITE -->
+  <div class="team-row">
+    <div class="team-card">
+      <img src="Rohan.jpg" alt="Partner 1 Name">
+      <h3>Rohan Mdletshe</h3>
+      <p class="role">Secretary</p>
+    </div>
+
+    <div class="team-card">
+      <img src="Treasurer.jpg" alt="Partner 2 Name">
+      <h3>N</h3>
+      <p class="role">Treasurer</p>
+    
+    </div>
+  </div>
+</div>
+
+<div class="donate-bar">
+<a href="index.html" class="btn btn-donate-main" style="margin-top:30px;">Back</a>
+  </div>
+  </footer>
+
+  <!-- FOOTER WITH SOCIAL MEDIA -->
+  <footer>
+    <h3 style="margin-bottom:15px;">Follow Us</h3>
+    <div class="social-icons">
+      <a href="https://facebook.com/profile.php?id=61590381341480 " target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/27627165789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p style="margin-top:20px;">© 2026 AL-SALAM | The Peace | Inanda, South Africa</p>
+    <p>May Allah accept this sadaqah jariyah</p>
+
+
+<script>
+<style>
+.footer-toggle {
+  text-align: center;
+  padding: 20px 10px;
+  background: #f5f5f5;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
+.footer-toggle a {
+  color: #2E8B57; /* change to your AL-SALAM brand color */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+.footer-toggle a:hover {
+  text-decoration: underline;
+}
+</style>
+
+<footer>
+
+</body>
+          </html>
