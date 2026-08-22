@@ -98,90 +98,106 @@
 }
 
 @keyframes slide-left {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-    .btn-back:hover {background:#0e7c4b;}
-    
-    /* FOOTER WITH SOCIAL MEDIA - Same as index */
-    footer {background:#0e7c4b; color:white; text-align:center; padding:30px 20px; margin-top:40px;}
-    .social-icons a {
-      color: white;
-      font-size: 24px;
-      margin: 0 12px;
-      text-decoration: none;
-    }
-    .social-icons a:hover { color: #ffb700; }
-    
-    /* LIGHTBOX */
-    #lightbox {
-      display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-      background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000; cursor:pointer; padding:20px;
-    }
-    #lightbox-img {max-width:90%; max-height:90%; border-radius:10px;}
-  </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - AL-SALAM | The Peace | Sadaqah Jariyah in Inanda</title>
+<meta name="description" content="See AL-SALAM work in Inanda - feeding, watering, teaching. All for the sake of Allah.">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+ body{font-family:'Inter',sans-serif; background:#FCFEFD}
+ h1,h2,.display{font-family:'Plus Jakarta Sans',sans-serif}
+.arabic{font-family:'Amiri',serif}
+.islamic-bg{position:relative; background:linear-gradient(180deg,#0e7c4b 0%,#0a5c38 100%); overflow:hidden}
+.islamic-bg::before{content:""; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100 0 L120 60 L180 60 L130 100 L150 160 L100 125 L50 160 L70 100 L20 60 L80 60 Z' fill='none' stroke='white' stroke-opacity='0.07' stroke-width='1'/%3E%3C/svg%3E"); background-size:220px; opacity:0.6}
+.islamic-light{background-color:#F6FAF7; background-image:url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230e7c4b' stroke-opacity='0.04'%3E%3Cpath d='M90 20 L110 70 L160 70 L120 100 L135 150 L90 120 L45 150 L60 100 L20 70 L70 70 Z'/%3E%3C/g%3E%3C/svg%3E")}
+.masjid-domes{clip-path:polygon(0 0,100% 0,100% 78%,84% 100%,68% 78%,50% 100%,32% 78%,16% 100%,0 78%)}
+</style>
 </head>
-<body>
-  <div class="top-banner">
-  <div class="banner-text">
-    🕌 Feeding 60+ children daily in Inanda • Help us reach 150 this month • Donate now and earn Sadaqah Jariyah • JazakAllah Khair
-  </div>
-  </div>
+<body class="antialiased">
 
-    <header>
-    <h1>AL-SALAM GALLERY</h1>
-    <p>Our Work in Inanda, South Africa</p>
-    </header>
-  <div class="container">
-    <div class="gallery">
-      <img src="D1.jpg" alt="AL-SALAM Feeding Program">
-      <img src="D2.jpg" alt="AL-SALAM Community Work">
-      <img src="D3.jpg" alt="AL-SALAM Activity">
-      <img src="D4.jpg" alt="AL-SALAM Activity">
-      <img src="²nd D.jpg" alt="AL-SALAM Activity">
-      <img src="D7.jpg" alt="AL-SALAM Activity">
-      <img src="D8.jpg" alt="AL-SALAM Activity">
-      <img src="²nd.jpg" alt="AL-SALAM Activity">
-    <img src="IMG-20260815-WA0128.jpg" alt="AL-SALAM Activity">
-      <img src="RaH.jpg" alt="AL-SALAM Activity">
-<img src="081.jpg" alt="AL-SALAM Activity">
-<img src="082.jpg" alt="AL-SALAM Activity">
-<img src="083.jpg" alt="AL-SALAM Activity">
-<img src="084.jpg" alt="AL-SALAM Activity">
-<img src="086.jpg" alt="AL-SALAM Activity">
-   <img src="086.jpg" alt="AL-SALAM Activity">   
-      <img src="W1.jpeg" alt="watering">
-      <img src="W3.jpg" alt="watering">
-      <img src="W3.jpg" alt="watering">
-    </div>
-    
-    <a href="index.html" class="btn-back">← Back to Home</a>
+<div class="bg-[#0A1F16] text-white py-2.5 overflow-hidden whitespace-nowrap text-[12px] font-bold tracking-widest">
+  <div class="animate-[marquee_25s_linear_infinite] inline-block">🕌 Feeding 60+ children daily in Inanda • Help us reach 150 this month • Donate now and earn Sadaqah Jariyah • JazakAllah Khair •</div>
+</div>
+<style>@keyframes marquee{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}</style>
+
+<nav class="sticky top-0 z-50 bg-[#0A1F16]/95 backdrop-blur-xl border-b border-white/10">
+  <div class="max-w-6xl mx-auto px-6 py-3.5 flex justify-between items-center">
+    <div class="flex items-center gap-3 text-white"><div class="w-9 h-9 rounded-full bg-[#0e7c4b] grid place-items-center font-bold">☪</div><div class="font-extrabold display tracking-tight">AL-SALAM <span class="text-[#C5A55A] font-medium">The Peace</span></div></div>
+    <div class="hidden md:flex gap-7 text-[12px] font-bold tracking-widest text-white/70"><a href="index.html" class="hover:text-white">HOME</a><a href="index.html#about" class="hover:text-white">ABOUT</a><a href="gallery.html" class="text-[#C5A55A]">GALLERY</a><a href="donate.html" class="hover:text-white">DONATE</a></div>
+    <a href="donate.html" class="bg-[#C5A55A] text-[#0A1F16] px-5 py-2.5 rounded-full text-[13px] font-extrabold">Donate Now</a>
+  </div>
+</nav>
+
+<header class="islamic-bg masjid-domes text-white text-center pt-14 pb-24 px-6 relative">
+  <div class="relative z-10 max-w-3xl mx-auto">
+    <p class="arabic text-[28px] opacity-80">وَمَا تُقَدِّمُوا لِأَنفُسِكُم مِّنْ خَيْرٍ تَجِدُوهُ عِندَ اللَّهِ</p>
+    <h1 class="display text-[48px] font-extrabold leading-[0.9] mt-4">Our Gallery</h1>
+    <p class="text-white/70 mt-2 text-[14px] tracking-[0.2em]">FEEDING • WATERING • TEACHING — INANDA, SA</p>
+    <p class="mt-4 inline-block bg-white/10 backdrop-blur border border-white/20 px-4 py-1.5 rounded-full text-[11px] font-bold tracking-widest">18 MOMENTS OF SADAQAH JARIYAH</p>
+  </div>
+</header>
+
+<div class="islamic-light">
+<div class="max-w-6xl mx-auto px-6 py-12">
+
+  <!-- FILTER TABS (just visual, no JS needed) -->
+  <div class="flex flex-wrap justify-center gap-2 mb-8">
+    <span class="bg-[#0A1F16] text-white px-5 py-2 rounded-full text-[12px] font-bold tracking-widest">ALL WORK</span>
+    <span class="bg-white border border-[#0e7c4b]/10 text-[#0e7c4b] px-5 py-2 rounded-full text-[12px] font-bold tracking-widest">FEEDING 🍞</span>
+    <span class="bg-white border border-[#0e7c4b]/10 text-[#0e7c4b] px-5 py-2 rounded-full text-[12px] font-bold tracking-widest">WATER 💧</span>
+    <span class="bg-white border border-[#0e7c4b]/10 text-[#0e7c4b] px-5 py-2 rounded-full text-[12px] font-bold tracking-widest">MADRESSAH 📖</span>
   </div>
 
-  <!-- FOOTER WITH SOCIAL MEDIA -->
-  <footer>
-    <h3 style="margin-bottom:15px;">Follow Us</h3>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/profile.php?id=61590381341480  " target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/27627165789" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
-    <p style="margin-top:20px;">© 2026 AL-SALAM | The Peace | Inanda, South Africa</p>
-    <p>May Allah accept this sadaqah jariyah</p>
-  </footer>
-
-  <!-- Lightbox -->
-  <div id="lightbox" onclick="this.style.display='none'">
-    <img id="lightbox-img">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 gallery">
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow-[0_10px_30px_-15px_rgba(0,0,0,0.15)] border border-black/5"><img src="D1.jpg" alt="AL-SALAM Feeding" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-left"><p class="text-white text-[11px] font-bold tracking-widest">FEEDING PROGRAM</p><p class="text-white/80 text-[12px]">Inanda, Durban</p></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="D2.jpg" alt="" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-left"><p class="text-white text-[11px] font-bold tracking-widest">COMMUNITY WORK</p></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="D3.jpg" alt="" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-left"><p class="text-white text-[11px] font-bold tracking-widest">SADAQAH JARIYAH</p></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="D4.jpg" alt="" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="D7.jpg" alt="" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-left"><p class="text-white text-[11px] font-bold tracking-widest">HOT MEALS</p></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="D8.jpg" alt="" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="IMG-20260815-WA0128.jpg" alt="" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="RaH.jpg" alt="" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="081.jpg" alt="" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="082.jpg" alt="" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="083.jpg" alt="" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="084.jpg" alt="" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="086.jpg" alt="" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="W1.jpeg" alt="watering" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-left"><p class="text-white text-[11px] font-bold tracking-widest">CLEAN WATER</p></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white shadow border"><img src="W3.jpg" alt="watering" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-700"></div>
   </div>
 
-  <script>
-    document.querySelectorAll('.gallery img').forEach(img => {
-      img.onclick = () => {
-        document.getElementById('lightbox').style.display = 'flex';
-        document.getElementById('lightbox-img').src = img.src;
-      }
-    });
-  </script>
+  <div class="text-center mt-10 flex justify-center gap-3">
+    <a href="index.html" class="bg-white border border-[#0e7c4b]/15 text-[#0e7c4b] px-7 py-3.5 rounded-full font-bold text-sm">← Back to Home</a>
+    <a href="donate.html" class="bg-[#0e7c4b] text-white px-7 py-3.5 rounded-full font-bold text-sm shadow-lg">Donate Now — Sadaqah Jariyah</a>
+  </div>
+
+</div>
+</div>
+
+<footer class="bg-[#0A1F16] text-white text-center py-10">
+  <div class="flex justify-center gap-6 text-xl opacity-70"><a href="https://www.facebook.com/profile.php?id=61590381341480" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/27627165789" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
+  <p class="mt-6 text-[11px] tracking-widest opacity-60">© 2026 AL-SALAM | The Peace | Inanda, South Africa</p>
+  <p class="arabic text-sm mt-2 text-[#C5A55A]">May Allah accept this sadaqah jariyah</p>
+</footer>
+
+<!-- Lightbox - Same function, premium look -->
+<div id="lightbox" class="fixed inset-0 hidden bg-black/90 backdrop-blur-xl z-[9999] p-6 items-center justify-center" onclick="this.style.display='none'">
+  <img id="lightbox-img" class="max-w-[90%] max-h-[85vh] rounded-[1.2rem] shadow-2xl border border-white/20">
+</div>
+
+<script>
+  document.querySelectorAll('.gallery img').forEach(img=>{
+    img.style.cursor='pointer';
+    img.onclick=()=>{
+      document.getElementById('lightbox').style.display='flex';
+      document.getElementById('lightbox-img').src=img.src;
+    }
+  });
+</script>
 </body>
 </html>
