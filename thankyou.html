@@ -3,21 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thank You - AL-SALAM</title>
+<title>JazakAllah Khair — AL-SALAM | The Peace</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-body { font-family: Arial, sans-serif; background: #f4f4f4; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-.box { background: white; padding: 40px; border-radius: 10px; text-align: center; max-width: 500px; }
-h1 { color: #2d6a4f; }
-a { color: #2d6a4f; text-decoration: none; font-weight: bold; }
+ body{font-family:'Inter',sans-serif}
+.display{font-family:'Plus Jakarta Sans',sans-serif}
+.arabic{font-family:'Amiri',serif}
+.islamic-light{background-color:#F6FAF7; background-image:url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230e7c4b' stroke-opacity='0.05'%3E%3Cpath d='M90 20 L110 70 L160 70 L120 100 L135 150 L90 120 L45 150 L60 100 L20 70 L70 70 Z'/%3E%3C/g%3E%3C/svg%3E")}
 </style>
 </head>
-<body>
-<div class="box">
-  <h1>JazakAllah Khair! 🤲</h1>
-  <p>Your donation to <b>AL-SALAM</b> has been received.</p>
+<body class="islamic-light min-h-screen flex items-center justify-center p-6">
 
-  <br>
-  <a href="https://0671271038.github.io/donate.html">Make Another Donation</a>
+<div class="bg-white w-full max-w-[520px] rounded-[2.2rem] p-10 text-center shadow-[0_30px_80px_-30px_rgba(14,124,75,0.4)] border border-[#0e7c4b]/10 relative overflow-hidden">
+
+  <!-- faded islamic glow behind -->
+  <div class="absolute -top-20 -right-20 w-60 h-60 bg-[#0e7c4b]/10 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-[#C5A55A]/20 rounded-full blur-3xl"></div>
+
+  <div class="relative z-10">
+    <div class="w-16 h-16 mx-auto rounded-full bg-[#E8F5E9] grid place-items-center text-3xl">🤲</div>
+
+    <p class="arabic text-[32px] mt-6 leading-none text-[#0e7c4b]">جَزَاكَ ٱللَّٰهُ خَيْرًا</p>
+    <h1 class="display text-[32px] font-extrabold leading-[0.9] mt-3 text-[#0A1F16]">JazakAllah Khair!</h1>
+    <p class="text-[13px] tracking-[0.3em] font-bold text-[#C5A55A] mt-2">YOUR DONATION IS RECEIVED</p>
+
+    <div class="mt-6 bg-[#F6FAF7] border border-[#0e7c4b]/10 rounded-2xl p-5 text-left">
+      <p class="text-[14px] leading-6 text-slate-700">Your donation to <b>AL-SALAM | The Peace</b> has been received. We will check and send you a receipt + make special dua for you and your family.</p>
+      <div class="mt-4 text-[12px] text-slate-500">
+        <p>📍 Inanda, South Africa • Feeding 60+ children daily</p>
+        <p class="mt-1">💳 FNB Islamic — <b>EH Mthembu — 63009990549</b></p>
+      </div>
+    </div>
+
+    <div class="mt-6 bg-[#0A1F16] rounded-2xl p-5 text-white text-left">
+      <p class="text-[11px] tracking-widest font-bold text-[#C5A55A]">DUA FOR YOU</p>
+      <p class="arabic text-[18px] mt-2 leading-6">اللهم بارك له في ماله وأهله وارزقه من حيث لا يحتسب</p>
+      <p class="text-[12px] text-white/60 mt-2 italic">"O Allah, bless his wealth, his family, and provide for him from where he does not expect."</p>
+    </div>
+
+    <div class="mt-7 flex flex-col gap-3">
+      <a href="https://wa.me/27627165789?text=Assalamualaikum%20I%20just%20donated%20via%20website%2C%20please%20confirm%20my%20donation%20JazakAllah" class="bg-[#25D366] text-white py-4 rounded-full font-bold text-sm">💬 Confirm on WhatsApp — 062 716 5789</a>
+      <div class="flex gap-3">
+        <a href="index.html" class="flex-1 bg-[#0A1F16] text-white py-3.5 rounded-full font-bold text-[13px]">← Back to Home</a>
+        <a href="donate.html" class="flex-1 bg-white border border-slate-200 text-[#0A1F16] py-3.5 rounded-full font-bold text-[13px]">Donate Again</a>
+      </div>
+    </div>
+
+    <p class="text-[11px] text-slate-400 mt-6">You will be redirected to home in <span id="count">10</span>s • May Allah accept this sadaqah jariyah</p>
+  </div>
 </div>
+
+<script>
+  // auto redirect after 10s to home
+  let c=10;
+  setInterval(()=>{
+    c--; document.getElementById('count').textContent=c;
+    if(c<=0) window.location.href='index.html';
+  },1000);
+</script>
+
 </body>
 </html>
