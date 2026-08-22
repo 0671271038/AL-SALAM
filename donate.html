@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Donate - AL-SALAM</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[#F6FAF7] flex items-center justify-center min-h-screen p-6">
-<div class="bg-white w-full max-w-[480px] rounded-[2rem] p-8 shadow-xl">
-<h2 class="font-bold text-2xl" style="font-family:'Plus Jakarta Sans'">Donate to AL-SALAM</h2>
-
-<form onsubmit="goThankYou(event)" class="mt-6 space-y-3">
-<select id="type" required class="w-full p-4 rounded-full bg-gray-50 border text-sm"><option value="">Donation Type</option><option>Zakat</option><option>Sadaqah</option><option>Lillah</option><option>Feeding Programme</option><option>Water Project</option></select>
-<input id="name" required placeholder="Full Name" class="w-full p-4 rounded-full bg-gray-50 border text-sm">
-<input id="email" required type="email" placeholder="Email" class="w-full p-4 rounded-full bg-gray-50 border text-sm">
-<input id="amount" required type="number" placeholder="Amount (R)" class="w-full p-4 rounded-full bg-gray-50 border text-sm font-bold">
-<input id="msg" placeholder="Message" class="w-full p-4 rounded-full bg-gray-50 border text-sm">
-<button class="w-full bg-[#0e7c4b] text-white p-4 rounded-full font-bold">Donate Now →</button>
+<body class="bg-[#F6FAF7] min-h-screen flex items-center justify-center p-6">
+<div class="bg-white max-w-[480px] w-full rounded-[2rem] p-8 shadow-xl">
+<h2 class="text-2xl font-extrabold" style="font-family:'Plus Jakarta Sans'">Donate to AL-SALAM</h2>
+<form id="f" class="mt-6 space-y-3">
+<select id="type" required class="w-full p-4 rounded-full bg-gray-50 border"><option value="">Donation Type</option><option>Zakat</option><option>Sadaqah</option><option>Lillah</option><option>Feeding Programme</option><option>Water Project</option></select>
+<input id="name" required placeholder="Full Name" class="w-full p-4 rounded-full bg-gray-50 border">
+<input id="email" required type="email" placeholder="Email" class="w-full p-4 rounded-full bg-gray-50 border">
+<input id="amount" required type="number" placeholder="Amount (R)" class="w-full p-4 rounded-full bg-gray-50 border font-bold">
+<input id="msg" placeholder="Message / Dua" class="w-full p-4 rounded-full bg-gray-50 border">
+<button class="w-full bg-[#0e7c4b] text-white p-4 rounded-full font-bold">Donate Now → Thank You</button>
 </form>
 </div>
-
 <script>
-function goThankYou(e){
+document.getElementById('f').onsubmit=(e)=>{
  e.preventDefault();
- var t=document.getElementById('type').value;
- var n=document.getElementById('name').value;
- var a=document.getElementById('amount').value;
- var m=document.getElementById('msg').value;
- // Save to send on WhatsApp from thankyou page
- localStorage.setItem('donor', JSON.stringify({type:t,name:n,amount:a,msg:m}));
- // Direct redirect - NO external POST, so Chrome cannot block
- window.location.href = './thankyou.html';
+ localStorage.setItem('alsalam_donor', JSON.stringify({
+  type: type.value, name: name.value, email: email.value, amount: amount.value, msg: msg.value, date: new Date().toLocaleString()
+ }));
+ location.href='./thankyou.html';
 }
 </script>
 </body></html>
