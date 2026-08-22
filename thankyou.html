@@ -1,41 +1,69 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Thank You - AL-SALAM</title>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>JazakAllah Khair - AL-SALAM Receipt</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[#F6FAF7] min-h-screen flex items-center justify-center p-6">
-<div class="bg-white max-w-[520px] w-full rounded-[2rem] p-8 text-center shadow-xl">
-<div class="text-4xl">🤲</div>
-<p class="font-bold mt-4" style="font-family:'Amiri'; font-size:28px; color:#0e7c4b">جَزَاكَ ٱللَّٰهُ خَيْرًا</p>
-<h1 class="text-3xl font-extrabold" style="font-family:'Plus Jakarta Sans'">JazakAllah Khair!</h1>
-<p class="text-sm text-slate-500 mt-2">Your donation details are being sent...</p>
+<body class="bg-[#F6FAF7] min-h-screen flex items-center justify-center p-4">
+<div class="bg-white max-w-[540px] w-full rounded-[2.2rem] shadow-[0_30px_80px_-30px_rgba(0,0,0,0.3)] overflow-hidden border">
 
-<div id="details" class="mt-6 text-left bg-[#F6FAF7] p-4 rounded-2xl text-sm"></div>
+<!-- Header -->
+<div class="bg-[#0A1F16] text-white p-6 flex justify-between items-center">
+<div><p class="text-[10px] tracking-[0.3em] text-[#C5A55A] font-bold">AL-SALAM | THE PEACE</p><p class="font-bold">Official Donation Receipt</p></div>
+<div class="text-right"><p class="arabic text-[#C5A55A] text-xl">صدقة جارية</p><p id="ref" class="text-[10px] opacity-70"></p></div>
+</div>
 
-<a id="waBtn" href="#" target="_blank" class="mt-6 block w-full bg-[#25D366] text-white py-4 rounded-full font-bold">💬 Confirm on WhatsApp - 062 716 5789</a>
-<p id="emailStatus" class="text-xs text-slate-400 mt-3">Sending email to salamhelp26@gmail.com...</p>
-<a href="index.html" class="mt-4 block text-sm text-slate-500">← Back to Home</a>
+<div class="p-8 text-center">
+<div class="w-14 h-14 mx-auto bg-[#E8F5E9] rounded-full grid place-items-center text-2xl">✅</div>
+<p class="arabic mt-4 text-3xl text-[#0e7c4b]">جَزَاكَ ٱللَّٰهُ خَيْرًا</p>
+<h1 class="text-[28px] font-extrabold leading-none mt-1" style="font-family:'Plus Jakarta Sans'">JazakAllah Khair!</h1>
+<p class="text-xs text-slate-400 mt-2">May Allah accept your Sadaqah Jariyah</p>
+
+<!-- RECEIPT BOX -->
+<div id="receipt" class="mt-6 bg-[#F9FAF7] border border-dashed border-[#0e7c4b]/30 rounded-2xl p-5 text-left">
+<div class="flex justify-between text-xs text-slate-500"><span>DATE</span><span id="rDate"></span></div>
+<div class="mt-4 space-y-3 text-sm">
+<div class="flex justify-between"><span class="text-slate-500">Donor Name</span><b id="rName">-</b></div>
+<div class="flex justify-between"><span class="text-slate-500">Donation Type</span><b id="rType" class="text-[#0e7c4b]">-</b></div>
+<div class="flex justify-between"><span class="text-slate-500">Email</span><b id="rEmail">-</b></div>
+<div class="flex justify-between text-[16px] border-t pt-3 mt-3"><span class="font-bold">Amount</span><b id="rAmount" class="text-[#0e7c4b] text-xl">R -</b></div>
+<div class="mt-3 bg-white p-3 rounded-xl text-xs"><b>Message:</b> <span id="rMsg">-</span></div>
+</div>
+<div class="mt-4 text-[11px] text-center text-slate-400">FNB Islamic — EH Mthembu — 63009990549 • Inanda, SA</div>
+</div>
+
+<p id="emailStatus" class="text-xs mt-4 text-slate-400">Sending email...</p>
+
+<div class="mt-6 grid grid-cols-2 gap-3">
+<a id="waBtn" target="_blank" class="bg-[#25D366] text-white py-3.5 rounded-full font-bold text-sm text-center">💬 WhatsApp Receipt</a>
+<button onclick="window.print()" class="bg-[#0A1F16] text-white py-3.5 rounded-full font-bold text-sm">📄 Download / Print</button>
+</div>
+<a href="index.html" class="mt-4 block text-xs text-slate-400">← Back to Home — you will be redirected in <span id="count">15</span>s</a>
+</div>
 </div>
 
 <script>
 const d = JSON.parse(localStorage.getItem('alsalam_donor')||'{}');
-document.getElementById('details').innerHTML = `<b>Name:</b> ${d.name||''}<br><b>Type:</b> ${d.type||''}<br><b>Amount:</b> R${d.amount||''}<br><b>Email:</b> ${d.email||''}`;
+const ref = 'AS-' + Date.now().toString().slice(-6);
+document.getElementById('ref').innerText = 'REF: '+ref;
+document.getElementById('rDate').innerText = d.date || new Date().toLocaleDateString();
+document.getElementById('rName').innerText = d.name || '-';
+document.getElementById('rType').innerText = d.type || '-';
+document.getElementById('rEmail').innerText = d.email || '-';
+document.getElementById('rAmount').innerText = 'R ' + (d.amount||'0');
+document.getElementById('rMsg').innerText = d.msg || 'No message';
 
-// 1. Prepare WhatsApp link
-const waText = `Assalamualaikum AL-SALAM Foundation,%0A%0AI donated via website:%0AName: ${d.name}%0AEmail: ${d.email}%0AType: ${d.type}%0AAmount: R${d.amount}%0AMessage: ${d.msg||''}%0ADate: ${d.date}`;
-const waUrl = `https://wa.me/27627165789?text=${waText}`;
-document.getElementById('waBtn').href = waUrl;
+const waText = `*AL-SALAM OFFICIAL RECEIPT* %0A%0AREF: ${ref}%0AName: ${d.name}%0AType: ${d.type}%0AAmount: R${d.amount}%0AEmail: ${d.email}%0ADate: ${d.date}%0A%0AJazakAllah Khair! May Allah accept it. 🤲%0AFNB: EH Mthembu - 63009990549`;
+document.getElementById('waBtn').href = `https://wa.me/27627165789?text=${waText}`;
 
-// 2. Try to send email in background (no black screen because we are already on thankyou)
-fetch('https://formsubmit.co/ajax/salamhelp26@gmail.com', {
- method:'POST',
- headers:{'Content-Type':'application/json'},
- body: JSON.stringify({name:d.name,email:d.email,amount:d.amount,type:d.type,message:d.msg,_subject:`New Donation R${d.amount} - ${d.name}`,_captcha:'false'})
-}).then(r=>{ document.getElementById('emailStatus').innerText='✅ Email sent to salamhelp26@gmail.com!'; })
-.catch(()=>{ document.getElementById('emailStatus').innerText='⚠️ Email will be sent via WhatsApp. Click green button above.'; });
+// Send email from thankyou
+fetch('https://formsubmit.co/ajax/salamhelp26@gmail.com',{
+ method:'POST', headers:{'Content-Type':'application/json'},
+ body: JSON.stringify({name:d.name,email:d.email,amount:'R'+d.amount,type:d.type,message:d.msg,ref:ref,_subject:`✅ NEW DONATION R${d.amount} - ${d.name} - ${ref}`,_captcha:'false'})
+}).then(()=>{document.getElementById('emailStatus').innerText='✅ Email sent + receipt saved';}).catch(()=>{document.getElementById('emailStatus').innerText='Receipt ready - send via WhatsApp above';});
 
-// Auto open WhatsApp after 2 sec (if not blocked)
-setTimeout(()=>{ window.open(waUrl,'_blank'); }, 2000);
+// countdown redirect
+let c=15; setInterval(()=>{c--; document.getElementById('count').innerText=c; if(c<=0) location.href='index.html';},1000);
 </script>
 </body></html>
