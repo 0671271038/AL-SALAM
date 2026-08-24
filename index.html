@@ -11,49 +11,29 @@
 <meta property="og:description" content="Islamic Charity in Inanda, Durban. Sadaqah Jariyah & Feeding Programs">
 <meta property="og:image" content="https://0671271038.github.io/AL-SALAM/D1.jpg">
 <meta property="og:url" content="https://0671271038.github.io/AL-SALAM">
-
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
-
 <style>
   :root { --green:#0e7c4b; --gold:#C5A55A; --dark:#0A1F16; }
   body { font-family:'Inter',sans-serif; background:#FCFEFD; color:#1a2a1f; }
   h1,h2,h3,.display { font-family:'Plus Jakarta Sans',sans-serif; }
- .arabic { font-family:'Amiri',serif; }
-  /* FADED ISLAMIC BACKGROUND */
- .islamic-bg {
-    position:relative;
-    background: linear-gradient(180deg, #0e7c4b 0%, #0a5c38 100%);
-    overflow:hidden;
-  }
- .islamic-bg::before {
-    content:"";
-    position:absolute; inset:0;
-    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100 0 L120 60 L180 60 L130 100 L150 160 L100 125 L50 160 L70 100 L20 60 L80 60 Z' fill='none' stroke='white' stroke-opacity='0.07' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='40' fill='none' stroke='white' stroke-opacity='0.05'/%3E%3C/svg%3E");
-    background-size: 220px;
-    opacity:0.6;
-  }
- .islamic-pattern-light {
-    background-color:#F6FAF7;
-    background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230e7c4b' stroke-opacity='0.04'%3E%3Cpath d='M90 20 L110 70 L160 70 L120 100 L135 150 L90 120 L45 150 L60 100 L20 70 L70 70 Z'/%3E%3C/g%3E%3C/svg%3E");
-  }
- .masjid-domes {
-    clip-path: polygon(0 0, 100% 0, 100% 78%, 84% 100%, 68% 78%, 50% 100%, 32% 78%, 16% 100%, 0 78%);
-  }
+.arabic { font-family:'Amiri',serif; }
+.islamic-bg { position:relative; background: linear-gradient(180deg, #0e7c4b 0%, #0a5c38 100%); overflow:hidden; }
+.islamic-bg::before { content:""; position:absolute; inset:0; background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100 0 L120 60 L180 60 L130 100 L150 160 L100 125 L50 160 L70 100 L20 60 L80 60 Z' fill='none' stroke='white' stroke-opacity='0.07' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='40' fill='none' stroke='white' stroke-opacity='0.05'/%3E%3C/svg%3E"); background-size: 220px; opacity:0.6; }
+.islamic-pattern-light { background-color:#F6FAF7; background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230e7c4b' stroke-opacity='0.04'%3E%3Cpath d='M90 20 L110 70 L160 70 L120 100 L135 150 L90 120 L45 150 L60 100 L20 70 L70 70 Z'/%3E%3C/g%3E%3C/svg%3E"); }
+.masjid-domes { clip-path: polygon(0 0, 100% 0, 100% 78%, 84% 100%, 68% 78%, 50% 100%, 32% 78%, 16% 100%, 0 78%); }
 </style>
 </head>
 <body class="antialiased">
 
-<!-- TOP BANNER -->
 <div class="bg-[#0A1F16] text-white py-2.5 overflow-hidden whitespace-nowrap text-[12px] font-bold tracking-widest">
   <div class="animate-[marquee_25s_linear_infinite] inline-block">
-    🕌 Feeding 60+ children daily in Inanda • Help us reach 150+ this month • Donate now and earn Sadaqah Jariyah • JazakAllah Khair • 🕌 Feeding 60+ children daily in Inanda • Help us reach 150+ this month •
+    🕌 Feeding 60+ children daily in Inanda • Help us reach 150+ this month • Call Now: 069 300 9337 • Donate now and earn Sadaqah Jariyah • JazakAllah Khair • 🕌
   </div>
 </div>
 <style>@keyframes marquee{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}</style>
 
-<!-- NAVBAR -->
 <nav class="sticky top-0 z-50 bg-[#0A1F16]/95 backdrop-blur-xl border-b border-white/10">
   <div class="max-w-6xl mx-auto px-6 py-3.5 flex justify-between items-center">
     <div class="flex items-center gap-3 text-white">
@@ -66,11 +46,13 @@
       <a href="team.html" class="hover:text-white">TEAM</a>
       <a href="#donate" class="hover:text-white">DONATE</a>
     </div>
-    <a href="donate.html" class="bg-[#C5A55A] hover:bg-[#b8964e] text-[#0A1F16] px-5 py-2.5 rounded-full text-[13px] font-extrabold transition">Donate Now</a>
+    <div class="flex items-center gap-2">
+      <a href="tel:+27693009337" class="hidden md:inline-flex bg-white/10 border border-white/20 text-white px-4 py-2.5 rounded-full text-[12px] font-bold tracking-widest hover:bg-white hover:text-[#0A1F16] transition">📞 Call Us Now</a>
+      <a href="donate.html" class="bg-[#C5A55A] hover:bg-[#b8964e] text-[#0A1F16] px-5 py-2.5 rounded-full text-[13px] font-extrabold transition">Donate Now</a>
+    </div>
   </div>
 </nav>
 
-<!-- HERO WITH FADED ISLAMIC SIGNS -->
 <header id="home" class="islamic-bg masjid-domes text-white text-center pt-16 pb-28 px-6 relative">
   <div class="relative z-10 max-w-3xl mx-auto">
     <p class="arabic text-[32px] leading-none opacity-90">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
@@ -78,20 +60,19 @@
     <h1 class="display text-[56px] md:text-[68px] font-extrabold leading-[0.9] mt-8">AL-SALAM<br><span class="text-[#C5A55A] font-light italic">The Peace</span></h1>
     <p class="mt-4 text-[13px] tracking-[0.4em] font-bold opacity-80">FEEDING • WATERING • TEACHING</p>
     <p class="mt-3 text-white/70">Based in Inanda, South Africa</p>
-    <div class="mt-8 flex justify-center gap-3">
+    <div class="mt-8 flex justify-center gap-3 flex-wrap">
       <a href="donate.html" class="bg-white text-[#0A1F16] px-8 py-4 rounded-full font-extrabold text-sm shadow-xl">Donate for Sadaqah Jariyah</a>
+      <a href="tel:+27693009337" class="bg-[#0A1F16] border border-white/20 text-white px-8 py-4 rounded-full font-bold text-sm">📞 Call Us Now: 069 300 9337</a>
       <a href="gallery.html" class="bg-white/10 backdrop-blur border border-white/20 text-white px-8 py-4 rounded-full font-bold text-sm">View Gallery</a>
     </div>
   </div>
 </header>
 
-<!-- DONATE BAR -->
-<div class="bg-[#C5A55A] py-3 text-center text-[#0A1F16] font-bold text-[12px] tracking-widest -mt-2 relative z-20">100% OF YOUR DONATION GOES DIRECTLY TO THOSE IN NEED • FULL TRANSPARENCY</div>
+<div class="bg-[#C5A55A] py-3 text-center text-[#0A1F16] font-bold text-[12px] tracking-widest -mt-2 relative z-20">100% OF YOUR DONATION GOES DIRECTLY TO THOSE IN NEED • CALL US: 069 300 9337 • FULL TRANSPARENCY</div>
 
 <div class="islamic-pattern-light">
 <div class="max-w-6xl mx-auto px-6 py-16">
 
-  <!-- CAUSES -->
   <div class="grid md:grid-cols-3 gap-6">
     <div class="bg-white rounded-[1.8rem] p-7 shadow-[0_10px_40px_-20px_rgba(14,124,75,0.3)] border border-[#0e7c4b]/10 text-center">
       <div class="w-12 h-12 mx-auto rounded-full bg-[#E8F5E9] grid place-items-center text-[#0e7c4b] text-xl">🍞</div>
@@ -120,7 +101,6 @@
     </div>
   </div>
 
-  <!-- SLIDER -->
   <div class="mt-10 overflow-hidden rounded-[1.8rem] border border-[#0e7c4b]/10 bg-white p-3">
     <div class="flex gap-3 animate-[marquee_30s_linear_infinite] w-max">
       <img src="D1.jpg" class="w-[280px] h-[180px] object-cover rounded-xl"><img src="D7.jpg" class="w-[280px] h-[180px] object-cover rounded-xl"><img src="D9.jpg" class="w-[280px] h-[180px] object-cover rounded-xl"><img src="083.jpg" class="w-[280px] h-[180px] object-cover rounded-xl"><img src="086.jpg" class="w-[280px] h-[180px] object-cover rounded-xl"><img src="W1.jpeg" class="w-[280px] h-[180px] object-cover rounded-xl"><img src="084.jpg" class="w-[280px] h-[180px] object-cover rounded-xl">
@@ -146,6 +126,7 @@
       <h2 class="display font-bold text-[#C5A55A]">Our Class Attendance</h2>
       <div class="mt-4 space-y-1 text-sm text-white/80"><p>Mon - Kids</p><p>Tue - Kids</p><p>Wed - Kids</p><p>Thu - Kids</p><p>Fri - Kids</p></div>
       <h2 class="display font-bold text-[#C5A55A] mt-6">For Sisters</h2><p class="text-sm text-white/80">Thursday</p>
+      <a href="tel:+27693009337" class="mt-6 inline-block bg-[#C5A55A] text-[#0A1F16] px-6 py-3 rounded-full font-bold text-sm">📞 Call Us Now: 069 300 9337</a>
     </div>
 
     <div class="bg-white rounded-[1.8rem] p-8 border border-[#0e7c4b]/10 shadow-sm" id="donate">
@@ -154,13 +135,15 @@
         <p><span class="text-slate-400">Account Holder:</span> <b>EH Mthembu</b></p>
         <p><span class="text-slate-400">Bank:</span> <b>FNB - Islamic Account</b></p>
         <p><span class="text-slate-400">Account No:</span> <b>63009990549</b></p>
-        <p class="text-[12px] italic text-slate-500">Use your name or Company as reference. WhatsApp proof to 062 716 5789</p>
+        <p class="text-[12px] italic text-slate-500">Use your name or Company as reference. WhatsApp proof to 069 300 9337</p>
       </div>
       <div class="mt-6 pt-6 border-t">
         <h2 class="display font-bold text-[#0e7c4b]">Contact Us</h2>
-        <p class="text-sm mt-2"><strong>WhatsApp or Call:</strong> <a href="https://wa.me/27627165789" class="text-[#0e7c4b] font-bold">062 716 5789</a></p>
+        <p class="text-sm mt-2"><strong>Business WhatsApp:</strong> <a href="https://wa.me/27693009337" class="text-[#0e7c4b] font-bold">069 300 9337</a> | <a href="tel:+27693009337" class="text-[#0A1F16] font-bold underline">📞 Call Now</a></p>
         <p class="text-sm"><strong>Email:</strong> <a href="mailto:salamhelp26@gmail.com" class="text-[#0e7c4b] font-bold">salamhelp26@gmail.com</a></p>
         <a href="donate.html" class="mt-5 inline-block bg-[#0e7c4b] text-white px-7 py-3 rounded-full font-bold text-sm w-full text-center">Donate Now — Sadaqah Jariyah</a>
+        <a href="tel:+27693009337" class="mt-3 inline-block bg-[#0A1F16] text-white px-7 py-3 rounded-full font-bold text-sm w-full text-center">📞 Call Us Now: 069 300 9337</a>
+        <a href="https://wa.me/27693009337" class="mt-3 inline-block bg-[#25D366] text-white px-7 py-3 rounded-full font-bold text-sm w-full text-center">💬 Business WhatsApp: 069 300 9337</a>
       </div>
     </div>
   </div>
@@ -168,7 +151,6 @@
 </div>
 </div>
 
-<!-- ABOUT -->
 <div class="bg-white py-16 px-6" id="about">
 <div class="max-w-6xl mx-auto text-center">
   <p class="arabic text-2xl text-[#0e7c4b]">السلام</p>
@@ -182,7 +164,6 @@
 </div>
 </div>
 
-<!-- TEAM - SAME AS YOURS BUT PREMIUM -->
 <section class="islamic-pattern-light py-16 px-6 text-center">
   <h2 class="display text-3xl font-extrabold">Our Team</h2>
   <div class="flex flex-wrap justify-center gap-10 mt-10">
@@ -196,9 +177,10 @@
   <div class="flex justify-center gap-6 text-xl opacity-80">
     <a href="https://facebook.com/profile.php?id=61590381341480" target="_blank"><i class="fab fa-facebook"></i></a>
     <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/27627165789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/27693009337" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+27693009337"><i class="fas fa-phone"></i></a>
   </div>
-  <p class="mt-6 text-[11px] tracking-widest opacity-60">© 2026 AL-SALAM | The Peace | Inanda, South Africa</p>
+  <p class="mt-6 text-[11px] tracking-widest opacity-60">© 2026 AL-SALAM | The Peace | Inanda, South Africa | Business WhatsApp: 069 300 9337 | Call Us Now</p>
   <p class="arabic text-sm mt-2 text-[#C5A55A]">May Allah accept this sadaqah jariyah</p>
 </footer>
 
