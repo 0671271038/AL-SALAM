@@ -1,45 +1,115 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>JazakAllah Khair - AL-SALAM Receipt</title>
+<title>JazakAllah Khair - AL-SALAM Receipt | The Peace</title>
+<meta name="description" content="Official AL-SALAM donation receipt - Inanda, Durban">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root{--green:#0e7c4b;--gold:#C5A55A;--dark:#081810}
+  body{font-family:'Inter',sans-serif;background:#FCFEFD}
+ .display{font-family:'Plus Jakarta Sans',sans-serif}
+ .arabic{font-family:'Amiri',serif}
+ .islamic-bg{position:relative;background:radial-gradient(1200px 600px at 20% -10%,#169666 0%,#0e7c4b 35%,#082f1d 100%);overflow:hidden}
+ .islamic-bg::before{content:"";position:absolute;inset:-20%;background-image:url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='320' fill='white' fill-opacity='0.04' text-anchor='middle' dominant-baseline='middle'%3E﷽%3C/text%3E%3C/svg%3E");opacity:0.5}
+  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+ .marquee-track{animation:marquee 40s linear infinite;display:flex;width:max-content}
+ .gold-glow{box-shadow:0 0 0 1px rgba(197,165,90,0.2),0 20px 60px -20px rgba(197,165,90,0.6),0 10px 40px -20px rgba(14,124,75,0.6)}
+ .shimmer{position:relative;overflow:hidden}
+ .shimmer::after{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);animation:shim 3s infinite}
+  @keyframes shim{100%{left:100%}}
+ .masjid{clip-path:polygon(0 0,100% 0,100% 82%,92% 100%,84% 88%,74% 100%,62% 86%,50% 100%,38% 86%,26% 100%,16% 88%,8% 100%,0 82%)}
+  @media print{nav,.no-print{display:none!important} body{background:white} #receipt{box-shadow:none!important}}
+</style>
 </head>
-<body class="bg-[#F6FAF7] min-h-screen flex items-center justify-center p-4">
-<div class="bg-white max-w-[540px] w-full rounded-[2.2rem] shadow-[0_30px_80px_-30px_rgba(0,0,0,0.3)] overflow-hidden border">
+<body class="antialiased">
 
-<!-- Header -->
-<div class="bg-[#0A1F16] text-white p-6 flex justify-between items-center">
-<div><p class="text-[10px] tracking-[0.3em] text-[#C5A55A] font-bold">AL-SALAM | THE PEACE</p><p class="font-bold">Official Donation Receipt</p></div>
-<div class="text-right"><p class="arabic text-[#C5A55A] text-xl">صدقة جارية</p><p id="ref" class="text-[10px] opacity-70"></p></div>
+<div class="bg-[#081810] text-[#C5A55A] py-2.5 overflow-hidden whitespace-nowrap text-[11px] font-bold tracking-[0.2em] border-b border-[#C5A55A]/20">
+  <div class="marquee-track inline-flex gap-12 w-max">
+    <span>🕌 JAZAKALLAH KHAIR FOR YOUR DONATION • MAY ALLAH ACCEPT YOUR SADAQAH JARIYAH • INANDA, DURBAN • 100% LILLAH •</span>
+    <span>🕌 JAZAKALLAH KHAIR FOR YOUR DONATION • MAY ALLAH ACCEPT YOUR SADAQAH JARIYAH • INANDA, DURBAN • 100% LILLAH •</span>
+  </div>
+</div>
+
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-2xl border-b border-black/5 no-print">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-[#0e7c4b] text-white grid place-items-center font-bold shadow-lg">☪</div>
+      <div class="display font-extrabold text-[18px] tracking-tight">AL-SALAM <span class="text-[#C5A55A] font-medium">The Peace</span></div>
+      <span class="hidden md:inline-flex ml-3 text-[10px] tracking-widest bg-[#0e7c4b]/10 text-[#0e7c4b] px-3 py-1 rounded-full font-bold border border-[#0e7c4b]/20">OFFICIAL RECEIPT</span>
+    </div>
+    <div class="hidden md:flex gap-8 text-[11px] font-bold tracking-widest text-black/50 items-center">
+      <a href="index.html" class="hover:text-black">HOME</a>
+      <a href="gallery.html" class="hover:text-black">GALLERY</a>
+      <a href="donate.html" class="hover:text-black">DONATE</a>
+    </div>
+    <a href="index.html" class="bg-[#081810] text-white px-6 py-3 rounded-full text-[12px] font-bold tracking-widest">← HOME</a>
+  </div>
+</nav>
+
+<header class="islamic-bg masjid text-white text-center pt-10 pb-24 px-6 relative no-print">
+  <div class="relative z-10 max-w-2xl mx-auto">
+    <div class="w-16 h-16 mx-auto bg-white rounded-full grid place-items-center text-3xl gold-glow">✅</div>
+    <p class="arabic text-[36px] leading-none mt-6">جَزَاكَ ٱللَّٰهُ خَيْرًا</p>
+    <h1 class="display text-[40px] md:text-[52px] font-extrabold leading-[0.9] mt-3 tracking-[-0.02em]">JazakAllah Khair!</h1>
+    <p class="mt-3 text-[12px] tracking-[0.3em] font-bold opacity-80">MAY ALLAH ACCEPT YOUR SADAQAH JARIYAH • INANDA</p>
+  </div>
+</header>
+
+<div class="max-w-[580px] mx-auto px-4 -mt-16 relative z-20 pb-16">
+<div class="bg-white rounded-[2.2rem] shadow-[0_30px_80px_-20px_rgba(8,24,16,0.25)] overflow-hidden border border-black/5 gold-glow">
+
+<div class="bg-[#081810] text-white p-6 flex justify-between items-center">
+  <div>
+    <p class="text-[10px] tracking-[0.3em] text-[#C5A55A] font-bold">AL-SALAM | THE PEACE</p>
+    <p class="display font-bold text-[15px]">Official Donation Receipt</p>
+    <p class="text-[10px] opacity-60 mt-1">FNB Islamic • EH Mthembu • 63009990549</p>
+  </div>
+  <div class="text-right">
+    <p class="arabic text-[#C5A55A] text-[22px] leading-none">صدقة جارية</p>
+    <p id="ref" class="text-[10px] mt-1 bg-white/10 px-2.5 py-1 rounded-full font-bold tracking-widest"></p>
+    <p id="rDate" class="text-[10px] opacity-60 mt-1"></p>
+  </div>
 </div>
 
 <div class="p-8 text-center">
-<div class="w-14 h-14 mx-auto bg-[#E8F5E9] rounded-full grid place-items-center text-2xl">✅</div>
-<p class="arabic mt-4 text-3xl text-[#0e7c4b]">جَزَاكَ ٱللَّٰهُ خَيْرًا</p>
-<h1 class="text-[28px] font-extrabold leading-none mt-1" style="font-family:'Plus Jakarta Sans'">JazakAllah Khair!</h1>
-<p class="text-xs text-slate-400 mt-2">May Allah accept your Sadaqah Jariyah</p>
+  <div class="inline-flex items-center gap-2 bg-[#E8F5E9] text-[#0e7c4b] px-4 py-1.5 rounded-full text-[11px] font-bold tracking-widest"><span class="w-2 h-2 bg-[#0e7c4b] rounded-full animate-pulse"></span> DONATION VERIFIED</div>
+  <h2 class="display font-extrabold text-[22px] mt-4">Your Receipt is Ready</h2>
+  <p class="text-[12px] text-slate-400 mt-1">Keep this for your records — 100% Lillah</p>
 
-<!-- RECEIPT BOX -->
-<div id="receipt" class="mt-6 bg-[#F9FAF7] border border-dashed border-[#0e7c4b]/30 rounded-2xl p-5 text-left">
-<div class="flex justify-between text-xs text-slate-500"><span>DATE</span><span id="rDate"></span></div>
-<div class="mt-4 space-y-3 text-sm">
-<div class="flex justify-between"><span class="text-slate-500">Donor Name</span><b id="rName">-</b></div>
-<div class="flex justify-between"><span class="text-slate-500">Donation Type</span><b id="rType" class="text-[#0e7c4b]">-</b></div>
-<div class="flex justify-between"><span class="text-slate-500">Email</span><b id="rEmail">-</b></div>
-<div class="flex justify-between text-[16px] border-t pt-3 mt-3"><span class="font-bold">Amount</span><b id="rAmount" class="text-[#0e7c4b] text-xl">R -</b></div>
-<div class="mt-3 bg-white p-3 rounded-xl text-xs"><b>Message:</b> <span id="rMsg">-</span></div>
+  <div id="receipt" class="mt-6 bg-[#F9FAF7] border border-dashed border-[#0e7c4b]/20 rounded-[1.5rem] p-5 text-left">
+    <div class="space-y-3.5 text-[13px]">
+      <div class="flex justify-between items-center"><span class="text-slate-400 text-[11px] font-bold tracking-widest">DONOR NAME</span><b id="rName" class="text-[14px]">-</b></div>
+      <div class="flex justify-between items-center"><span class="text-slate-400 text-[11px] font-bold tracking-widest">DONATION TYPE</span><b id="rType" class="text-[#0e7c4b] bg-[#0e7c4b]/10 px-3 py-1 rounded-full text-[11px]">-</b></div>
+      <div class="flex justify-between items-center"><span class="text-slate-400 text-[11px] font-bold tracking-widest">EMAIL</span><b id="rEmail" class="text-[12px]">-</b></div>
+      <div class="h-[1px] bg-black/5 my-1"></div>
+      <div class="flex justify-between items-center text-[15px]"><span class="font-extrabold tracking-widest text-[11px]">AMOUNT DONATED</span><b id="rAmount" class="text-[#0e7c4b] text-[24px] display">R -</b></div>
+      <div class="mt-2 bg-white p-4 rounded-xl border border-black/5 text-[12px] leading-relaxed"><span class="text-[10px] font-bold tracking-widest text-slate-400 block mb-1">YOUR DUA / MESSAGE</span><span id="rMsg" class="text-slate-700">-</span></div>
+    </div>
+    <div class="mt-4 text-[10px] text-center text-slate-400 tracking-widest font-bold">📍 INANDA, DURBAN • FNB ISLAMIC ACCOUNT VERIFIED • 100% TRANSPARENCY</div>
+  </div>
+
+  <p id="emailStatus" class="text-[11px] mt-4 inline-flex bg-slate-50 border px-3 py-1.5 rounded-full text-slate-500"><i class="fa-solid fa-envelope mr-2"></i>Sending confirmation email...</p>
+
+  <div class="mt-6 grid grid-cols-2 gap-3 no-print">
+    <a id="waBtn" target="_blank" class="shimmer bg-[#25D366] hover:bg-[#1eb85a] text-white py-4 rounded-full font-extrabold text-[13px] text-center shadow-[0_10px_30px_-15px_#25D366] transition"><i class="fab fa-whatsapp mr-2"></i> WhatsApp Receipt</a>
+    <button onclick="window.print()" class="bg-[#081810] hover:bg-black text-white py-4 rounded-full font-extrabold text-[13px] transition"><i class="fa-solid fa-print mr-2"></i> Print / Save PDF</button>
+  </div>
+
+  <div class="mt-6 bg-[#081810] rounded-2xl p-4 flex justify-between items-center text-left no-print">
+    <div class="text-white"><p class="text-[11px] font-bold tracking-widest text-[#C5A55A]">NEED HELP?</p><p class="text-[12px] text-white/70">Send proof to WhatsApp</p></div>
+    <a href="https://wa.me/27693009337" class="bg-white text-black px-5 py-2.5 rounded-full text-[12px] font-bold">069 300 9337</a>
+  </div>
+
+  <a href="index.html" class="mt-6 block text-[11px] text-slate-400 tracking-widest font-bold no-print">← BACK TO HOME — REDIRECT IN <span id="count" class="text-[#0e7c4b]">20</span>s • CLICK TO STAY</a>
+  <p class="arabic text-[#C5A55A] mt-4 text-[14px]">May Allah accept this sadaqah jariyah and make it heavy on your scale</p>
 </div>
-<div class="mt-4 text-[11px] text-center text-slate-400">FNB Islamic — EH Mthembu — 63009990549 • Inanda, SA</div>
 </div>
 
-<p id="emailStatus" class="text-xs mt-4 text-slate-400">Sending email...</p>
-
-<div class="mt-6 grid grid-cols-2 gap-3">
-<a id="waBtn" target="_blank" class="bg-[#25D366] text-white py-3.5 rounded-full font-bold text-sm text-center">💬 WhatsApp Receipt</a>
-<button onclick="window.print()" class="bg-[#0A1F16] text-white py-3.5 rounded-full font-bold text-sm">📄 Download / Print</button>
-</div>
-<a href="index.html" class="mt-4 block text-xs text-slate-400">← Back to Home — you will be redirected in <span id="count">15</span>s</a>
+<div class="text-center mt-6 no-print">
+  <p class="text-[10px] tracking-[0.2em] font-bold text-slate-300">© 2026 AL-SALAM | THE PEACE | INANDA • BUILT BY PoisnWeb-067 127 1038</p>
 </div>
 </div>
 
@@ -47,23 +117,22 @@
 const d = JSON.parse(localStorage.getItem('alsalam_donor')||'{}');
 const ref = 'AS-' + Date.now().toString().slice(-6);
 document.getElementById('ref').innerText = 'REF: '+ref;
-document.getElementById('rDate').innerText = d.date || new Date().toLocaleDateString();
-document.getElementById('rName').innerText = d.name || '-';
-document.getElementById('rType').innerText = d.type || '-';
+document.getElementById('rDate').innerText = d.date || new Date().toLocaleDateString('en-ZA',{day:'2-digit',month:'short',year:'numeric'});
+document.getElementById('rName').innerText = d.name || 'Anonymous Donor';
+document.getElementById('rType').innerText = (d.type || 'Sadaqah').toUpperCase();
 document.getElementById('rEmail').innerText = d.email || '-';
 document.getElementById('rAmount').innerText = 'R ' + (d.amount||'0');
-document.getElementById('rMsg').innerText = d.msg || 'No message';
+document.getElementById('rMsg').innerText = d.msg || 'May Allah accept it. Please remember us in your duas.';
 
-const waText = `*AL-SALAM OFFICIAL RECEIPT* %0A%0AREF: ${ref}%0AName: ${d.name}%0AType: ${d.type}%0AAmount: R${d.amount}%0AEmail: ${d.email}%0ADate: ${d.date}%0A%0AJazakAllah Khair! May Allah accept it. 🤲%0AFNB: EH Mthembu - 63009990549`;
-document.getElementById('waBtn').href = `https://wa.me/27627165789?text=${waText}`;
+const waText = `*AL-SALAM OFFICIAL RECEIPT* %0A%0AREF: ${ref}%0AName: ${d.name}%0AType: ${d.type}%0AAmount: R${d.amount}%0AEmail: ${d.email}%0ADate: ${d.date}%0A%0AJazakAllah Khair! May Allah accept it. 🤲%0AFNB Islamic: EH Mthembu - 63009990549 - Inanda`;
+document.getElementById('waBtn').href = `https://wa.me/27693009337?text=${waText}`;
 
-// Send email from thankyou
 fetch('https://formsubmit.co/ajax/salamhelp26@gmail.com',{
  method:'POST', headers:{'Content-Type':'application/json'},
  body: JSON.stringify({name:d.name,email:d.email,amount:'R'+d.amount,type:d.type,message:d.msg,ref:ref,_subject:`✅ NEW DONATION R${d.amount} - ${d.name} - ${ref}`,_captcha:'false'})
-}).then(()=>{document.getElementById('emailStatus').innerText='✅ Email sent + receipt saved';}).catch(()=>{document.getElementById('emailStatus').innerText='Receipt ready - send via WhatsApp above';});
+}).then(()=>{document.getElementById('emailStatus').innerHTML='<i class="fa-solid fa-check text-[#0e7c4b] mr-2"></i>✅ Receipt emailed + saved';}).catch(()=>{document.getElementById('emailStatus').innerHTML='<i class="fa-brands fa-whatsapp text-[#25D366] mr-2"></i>Ready - send via WhatsApp above';});
 
-// countdown redirect
-let c=15; setInterval(()=>{c--; document.getElementById('count').innerText=c; if(c<=0) location.href='index.html';},1000);
+let c=20; const iv=setInterval(()=>{c--; document.getElementById('count').innerText=c; if(c<=0){clearInterval(iv); location.href='index.html';}},1000);
+document.getElementById('count').parentElement.onclick=(e)=>{e.preventDefault(); clearInterval(iv); document.getElementById('count').parentElement.innerText='Redirect paused — JazakAllah';};
 </script>
 </body></html>
