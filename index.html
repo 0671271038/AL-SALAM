@@ -24,14 +24,17 @@
 .shimmer::after{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);animation:shim 3s infinite}
   @keyframes shim{100%{left:100%}}
   @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.marquee-track{animation:marquee 40s linear infinite}
+.marquee-track{animation:marquee 40s linear infinite; display:flex; width:max-content}
 .marquee-track:hover{animation-play-state:paused}
 .masjid{clip-path:polygon(0 0,100% 0,100% 82%,92% 100%,84% 88%,74% 100%,62% 86%,50% 100%,38% 86%,26% 100%,16% 88%,8% 100%,0 82%)}
+ /* FIXED GALLERY */
+.gallery-img{height:220px; width:320px; object-fit:cover; flex-shrink:0; border-radius:12px}
+ @media(max-width:640px){.gallery-img{height:180px; width:260px}}
 </style>
 </head>
 <body class="antialiased">
 
-<div class="bg-[#081810] text-[#C5A55A] py-2.5 overflow-hidden whitespace-nowrap text- font-bold tracking-[0.2em] border-b border-[#C5A55A]/20">
+<div class="bg-[#081810] text-[#C5A55A] py-2.5 overflow-hidden whitespace-nowrap text-[11px] font-bold tracking-[0.2em] border-b border-[#C5A55A]/20">
   <div class="marquee-track inline-flex gap-12 w-max">
     <span>🕌 FEEDING 60+ CHILDREN DAILY IN INANDA • HELP US REACH 150+ THIS MONTH • CALL NOW: 069 300 9337 • 100% LILLAH • JAZAKALLAH KHAIR •</span>
     <span>🕌 FEEDING 60+ CHILDREN DAILY IN INANDA • HELP US REACH 150+ THIS MONTH • CALL NOW: 069 300 9337 • 100% LILLAH • JAZAKALLAH KHAIR •</span>
@@ -42,64 +45,64 @@
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 rounded-full bg-[#0e7c4b] text-white grid place-items-center font-bold shadow-lg">☪</div>
-      <div class="display font-extrabold text- tracking-tight">AL-SALAM <span class="text-[#C5A55A] font-medium"><h1>The Peace</h1></span></div>
-      <span class="hidden md:inline-flex ml-3 text- tracking-widest bg-[#0e7c4b]/10 text-[#0e7c4b] px-3 py-1 rounded-full font-bold border border-[#0e7c4b]/20">EST. INANDA • DURBAN</span>
+      <div class="display font-extrabold text-[18px] tracking-tight">AL-SALAM <span class="text-[#C5A55A] font-medium">The Peace</span></div>
+      <span class="hidden md:inline-flex ml-3 text-[10px] tracking-widest bg-[#0e7c4b]/10 text-[#0e7c4b] px-3 py-1 rounded-full font-bold border border-[#0e7c4b]/20">EST. INANDA • DURBAN</span>
     </div>
-    <div class="hidden md:flex gap-8 text- font-bold tracking-widest text-black/50">
+    <div class="hidden md:flex gap-8 text-[11px] font-bold tracking-widest text-black/50">
       <a href="#home" class="hover:text-black">HOME</a>
       <a href="#about" class="hover:text-black">PROGRAMS</a>
       <a href="#videos" class="text-[#0e7c4b]">VIDEOS ●</a>
       <a href="#donate">DONATE</a>
     </div>
     <div class="flex items-center gap-2">
-      <a href="tel:+27693009337" class="hidden md:inline-flex w-10 h-10 rounded-full bg-black text-white grid place-items-center"><i class="fa-solid fa-phone text-"></i></a>
-      <a href="donate.html" class="bg-[#0e7c4b] hover:bg-[#0a5c38] text-white px-6 py-3 rounded-full text- font-extrabold tracking-widest shadow-[0_10px_30px_-15px_#0e7c4b] transition">DONATE NOW</a>
+      <a href="tel:+27693009337" class="hidden md:inline-flex w-10 h-10 rounded-full bg-black text-white grid place-items-center"><i class="fa-solid fa-phone text-[12px]"></i></a>
+      <a href="donate.html" class="bg-[#0e7c4b] hover:bg-[#0a5c38] text-white px-6 py-3 rounded-full text-[12px] font-extrabold tracking-widest shadow-[0_10px_30px_-15px_#0e7c4b] transition">DONATE NOW</a>
     </div>
   </div>
 </nav>
 
 <header id="home" class="islamic-bg masjid text-white text-center pt-20 pb-36 px-6 relative">
   <div class="relative z-10 max-w-4xl mx-auto">
-    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur px-4 py-2 rounded-full text- tracking-widest font-bold"><span class="w-2 h-2 bg-[#C5A55A] rounded-full animate-pulse"></span>INANDA</div>
-    <p class="arabic text- leading-none opacity-90 mt-8">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-    <h1 class="display text- md:text- font-extrabold leading-[0.85] mt-6 tracking-[-0.03em]">AL-SALAM<br><span class="font-light italic text-[#C5A55A]">The Peace</span></h1>
-    <p class="mt-6 text- tracking-[0.45em] font-bold opacity-80">FEEDING • WATERING • TEACHING • ORPHAN CARE</p>
+    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur px-4 py-2 rounded-full text-[10px] tracking-widest font-bold"><span class="w-2 h-2 bg-[#C5A55A] rounded-full animate-pulse"></span>INANDA</div>
+    <p class="arabic text-[36px] leading-none opacity-90 mt-8">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+    <h1 class="display text-[60px] md:text-[84px] font-extrabold leading-[0.85] mt-6 tracking-[-0.03em]">AL-SALAM<br><span class="font-light italic text-[#C5A55A]">The Peace</span></h1>
+    <p class="mt-6 text-[13px] tracking-[0.45em] font-bold opacity-80">FEEDING • WATERING • TEACHING • ORPHAN CARE</p>
     <div class="mt-10 flex justify-center gap-3 flex-wrap">
       <a href="donate.html" class="shimmer bg-white text-[#081810] px-9 py-4 rounded-full font-extrabold text-sm gold-glow">Donate for Sadaqah Jariyah — Lillah</a>
       <a href="#videos" class="bg-black/30 backdrop-blur border border-white/20 text-white px-9 py-4 rounded-full font-bold text-sm"><i class="fa-solid fa-play mr-2"></i> Watch 31st Videos</a>
     </div>
     <div class="mt-10 grid grid-cols-3 max-w-lg mx-auto divide-x divide-white/10 bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-4">
-      <div><p class="display font-extrabold text-">60+</p><p class="text- tracking-widest opacity-60">FED DAILY</p></div>
-      <div><p class="display font-extrabold text-">58+</p><p class="text- tracking-widest opacity-60">STUDENTS</p></div>
-      <div><p class="display font-extrabold text-">100%</p><p class="text- tracking-widest opacity-60">LILLAH</p></div>
+      <div><p class="display font-extrabold text-[22px]">60+</p><p class="text-[10px] tracking-widest opacity-60">FED DAILY</p></div>
+      <div><p class="display font-extrabold text-[22px]">58+</p><p class="text-[10px] tracking-widest opacity-60">STUDENTS</p></div>
+      <div><p class="display font-extrabold text-[22px]">100%</p><p class="text-[10px] tracking-widest opacity-60">LILLAH</p></div>
     </div>
   </div>
 </header>
 
-<div class="bg-[#C5A55A] text-[#081810] py-3 text-center font-bold text- tracking-[0.2em] -mt-1 relative z-20 flex justify-center gap-6"><span>✓ FNB ISLAMIC ACCOUNT VERIFIED</span><span class="hidden md:inline">•</span><span>✓ 100% TRANSPARENCY</span><span class="hidden md:inline">•</span><span>069 300 9337</span></div>
+<div class="bg-[#C5A55A] text-[#081810] py-3 text-center font-bold text-[11px] tracking-[0.2em] -mt-1 relative z-20 flex justify-center gap-6"><span>✓ FNB ISLAMIC ACCOUNT VERIFIED</span><span class="hidden md:inline">•</span><span>✓ 100% TRANSPARENCY</span><span class="hidden md:inline">•</span><span>069 300 9337</span></div>
 
 <div class="max-w-7xl mx-auto px-6 py-16">
   <div class="grid md:grid-cols-3 gap-6" id="about">
-    <div class="card-premium bg-white rounded- p-8 shadow-[0_20px_80px_-40px_rgba(14,124,75,.4)]">
+    <div class="card-premium bg-white rounded-[2rem] p-8 shadow-[0_20px_80px_-40px_rgba(14,124,75,.4)]">
       <div class="w-14 h-14 rounded-2xl bg-[#E8F5E9] grid place-items-center text-[#0e7c4b] text-xl"><i class="fa-solid fa-bread-slice"></i></div>
-      <h3 class="display font-extrabold mt-6 text-">FEED THE HUNGRY</h3>
-      <p class="arabic text- mt-3 text-[#0e7c4b]">“And they give food in spite of love for it”</p>
-      <p class="text- font-bold tracking-widest text-slate-400">QURAN 76:8</p>
+      <h3 class="display font-extrabold mt-6 text-[18px]">FEED THE HUNGRY</h3>
+      <p class="arabic text-[18px] mt-3 text-[#0e7c4b]">“And they give food in spite of love for it”</p>
+      <p class="text-[10px] font-bold tracking-widest text-slate-400">QURAN 76:8</p>
       <p class="text-sm text-slate-600 mt-4 leading-relaxed">Daily meals to families & children across Inanda. 60+ breads daily.</p>
-      <div class="mt-6 bg-[#0e7c4b]/5 border border-[#0e7c4b]/10 rounded-xl p-3 text-"><b>Need:</b> 50 Breads + Milk weekly — R750</div>
+      <div class="mt-6 bg-[#0e7c4b]/5 border border-[#0e7c4b]/10 rounded-xl p-3 text-[12px]"><b>Need:</b> 50 Breads + Milk weekly — R750</div>
     </div>
-    <div class="card-premium bg-white rounded- p-8 shadow-[0_20px_80px_-40px_rgba(14,124,75,.4)]">
+    <div class="card-premium bg-white rounded-[2rem] p-8 shadow-[0_20px_80px_-40px_rgba(14,124,75,.4)]">
       <div class="w-14 h-14 rounded-2xl bg-[#E8F5E9] grid place-items-center text-[#0e7c4b] text-xl"><i class="fa-solid fa-droplet"></i></div>
-      <h3 class="display font-extrabold mt-6 text-">CLEAN WATER</h3>
-      <p class="arabic text- mt-3 text-[#0e7c4b]">“We made from water every living thing”</p>
-      <p class="text- font-bold tracking-widest text-slate-400">QURAN 21:30</p>
+      <h3 class="display font-extrabold mt-6 text-[18px]">CLEAN WATER</h3>
+      <p class="arabic text-[18px] mt-3 text-[#0e7c4b]">“We made from water every living thing”</p>
+      <p class="text-[10px] font-bold tracking-widest text-slate-400">QURAN 21:30</p>
       <img src="W2.jpg" class="mt-4 rounded-2xl w-full h-40 object-cover">
     </div>
-    <div class="card-premium bg-[#081810] text-white rounded- p-8 gold-glow relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-40 h-40 bg-[#C5A55A]/20 blur- rounded-full"></div>
+    <div class="card-premium bg-[#081810] text-white rounded-[2rem] p-8 gold-glow relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-40 h-40 bg-[#C5A55A]/20 blur-[40px] rounded-full"></div>
       <div class="w-14 h-14 rounded-2xl bg-[#C5A55A] text-[#081810] grid place-items-center text-xl"><i class="fa-solid fa-book-quran"></i></div>
-      <h3 class="display font-extrabold mt-6 text- text-[#C5A55A]">TEACH MADRESSAH</h3>
-      <p class="text- mt-3 leading-6 text-white/70 italic">“Seeking knowledge is a path to Paradise” — ﷺ</p>
+      <h3 class="display font-extrabold mt-6 text-[18px] text-[#C5A55A]">TEACH MADRESSAH</h3>
+      <p class="text-[12px] mt-3 leading-6 text-white/70 italic">“Seeking knowledge is a path to Paradise” — ﷺ</p>
       <div class="mt-6 bg-white/5 border border-white/10 rounded-xl p-4">
         <p class="text-sm"><b class="text-[#C5A55A]">30+ Students + 28 Sisters</b><br>Boys & Girls — Qur’an, Hadith, Islamic values.</p>
       </div>
@@ -108,66 +111,68 @@
 
   <section id="videos" class="mt-16">
     <div class="flex justify-between items-end mb-6">
-      <div><h2 class="display font-extrabold text- tracking-tight">Latest Field Work 🎬</h2><p class="text-sm text-slate-500 mt-1">31st August — Inanda Feeding & Madressa</p></div>
-      <span class="hidden md:inline-flex text- tracking-widest bg-red-500 text-white px-3 py-1 rounded-full font-bold animate-pulse">● 2 NEW VIDEOS</span>
+      <div><h2 class="display font-extrabold text-[28px] tracking-tight">Latest Field Work 🎬</h2><p class="text-sm text-slate-500 mt-1">31st August — Inanda Feeding & Madressa</p></div>
+      <span class="hidden md:inline-flex text-[10px] tracking-widest bg-red-500 text-white px-3 py-1 rounded-full font-bold animate-pulse">● 2 NEW VIDEOS</span>
     </div>
     <div class="grid md:grid-cols-2 gap-6">
       <div class="video-card group rounded-[1.8rem] overflow-hidden bg-black border border-black/10 shadow-[0_30px_80px_-30px_black]">
         <div class="relative overflow-hidden">
-          <video controls playsinline preload="metadata" poster="IMG-20260903-WA0041.jpg" class="w-full h- object-cover">
+          <video controls playsinline preload="metadata" poster="IMG-20260903-WA0041.jpg" class="w-full h-[380px] object-cover">
             <source src="31st1.mp4" type="video/mp4">
           </video>
-          <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text- font-bold tracking-widest"><i class="fa-solid fa-location-dot mr-1"></i> INANDA • FEEDING</div>
+          <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold tracking-widest"><i class="fa-solid fa-location-dot mr-1"></i> INANDA • FEEDING</div>
         </div>
         <div class="bg-[#081810] text-white p-4 flex justify-between items-center">
-          <span class="text- font-bold tracking-widest">31st1 — FEEDING PROGRAM</span>
-          <span class="w-8 h-8 rounded-full bg-white/10 grid place-items-center"><i class="fa-solid fa-play text-"></i></span>
+          <span class="text-[12px] font-bold tracking-widest">31st1 — FEEDING PROGRAM</span>
+          <span class="w-8 h-8 rounded-full bg-white/10 grid place-items-center"><i class="fa-solid fa-play text-[10px]"></i></span>
         </div>
       </div>
       <div class="video-card group rounded-[1.8rem] overflow-hidden bg-black border border-black/10 shadow-[0_30px_80px_-30px_black]">
         <div class="relative overflow-hidden">
-          <video controls playsinline preload="metadata" poster="IMG-20260903-WA0042.jpg" class="w-full h- object-cover">
+          <video controls playsinline preload="metadata" poster="IMG-20260903-WA0042.jpg" class="w-full h-[380px] object-cover">
             <source src="31st2.mp4" type="video/mp4">
           </video>
-          <div class="absolute top-4 left-4 bg-[#C5A55A] text-black px-3 py-1 rounded-full text- font-bold tracking-widest">MADRESSA • 31st AUG</div>
+          <div class="absolute top-4 left-4 bg-[#C5A55A] text-black px-3 py-1 rounded-full text-[10px] font-bold tracking-widest">MADRESSA • 31st AUG</div>
         </div>
         <div class="bg-[#0e7c4b] text-white p-4 flex justify-between items-center">
-          <span class="text- font-bold tracking-widest">31st2 — MADRESSA ACTIVITIES</span>
-          <span class="w-8 h-8 rounded-full bg-white/20 grid place-items-center"><i class="fa-solid fa-play text-"></i></span>
+          <span class="text-[12px] font-bold tracking-widest">31st2 — MADRESSA ACTIVITIES</span>
+          <span class="w-8 h-8 rounded-full bg-white/20 grid place-items-center"><i class="fa-solid fa-play text-[10px]"></i></span>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FIXED SLIDESHOW - NO ZOOM -->
   <div class="mt-12 rounded-[1.8rem] border bg-white p-3 overflow-hidden">
-    <div class="flex justify-between items-center px-3 pb-3"><p class="text- font-bold tracking-widest text-slate-400">GALLERY • REAL IMPACT FROM INANDA</p><p class="text- text-slate-400"></p></div>
+    <div class="flex justify-between items-center px-3 pb-3"><p class="text-[11px] font-bold tracking-widest text-slate-400">GALLERY • REAL IMPACT FROM INANDA</p><p class="text-[10px] text-slate-400">HOVER TO PAUSE</p></div>
     <div class="overflow-hidden rounded-xl">
       <div class="marquee-track flex gap-3 w-max">
-        <img src="D1.jpg" class="w- h- object-cover rounded-xl hover:scale-[1.02] transition">
-        <img src="D7.jpg" class="w- h- object-cover rounded-xl">
-        <img src="IMG-20260903-WA0041.jpg" class="w- h- object-cover rounded-xl ring-2 ring-[#0e7c4b]/20">
-        <img src="D9.jpg" class="w- h- object-cover rounded-xl">
-        <img src="083.jpg" class="w- h- object-cover rounded-xl">
-        <img src="IMG-20260903-WA0042.jpg" class="w- h- object-cover rounded-xl ring-2 ring-[#C5A55A]/40">
-        <img src="086.jpg" class="w- h- object-cover rounded-xl">
-        <img src="W1.jpeg" class="w- h- object-cover rounded-xl">
-        <img src="D1.jpg" class="w- h- object-cover rounded-xl">
-        <img src="IMG-20260903-WA0041.jpg" class="w- h- object-cover rounded-xl">
-        <img src="IMG-20260903-WA0042.jpg" class="w- h- object-cover rounded-xl">
+        <img src="D1.jpg" class="gallery-img">
+        <img src="D7.jpg" class="gallery-img">
+        <img src="IMG-20260903-WA0041.jpg" class="gallery-img ring-2 ring-[#0e7c4b]/20">
+        <img src="D9.jpg" class="gallery-img">
+        <img src="083.jpg" class="gallery-img">
+        <img src="IMG-20260903-WA0042.jpg" class="gallery-img ring-2 ring-[#C5A55A]/40">
+        <img src="086.jpg" class="gallery-img">
+        <img src="W1.jpeg" class="gallery-img">
+        <!-- duplicate for seamless loop -->
+        <img src="D1.jpg" class="gallery-img">
+        <img src="IMG-20260903-WA0041.jpg" class="gallery-img">
+        <img src="IMG-20260903-WA0042.jpg" class="gallery-img">
       </div>
     </div>
   </div>
 
   <div class="grid md:grid-cols-2 gap-6 mt-10">
-    <div class="bg-[#081810] text-white rounded- p-9 relative overflow-hidden">
-      <div class="absolute -right-20 -top-20 w-80 h-80 bg-[#0e7c4b]/20 blur- rounded-full"></div>
-      <h2 class="display font-bold text-[#C5A55A] text-">Our Class Attendance</h2>
+    <div class="bg-[#081810] text-white rounded-[2rem] p-9 relative overflow-hidden">
+      <div class="absolute -right-20 -top-20 w-80 h-80 bg-[#0e7c4b]/20 blur-[60px] rounded-full"></div>
+      <h2 class="display font-bold text-[#C5A55A] text-[20px]">Our Class Attendance</h2>
       <div class="mt-4 grid grid-cols-2 gap-2 text-sm text-white/70"><span class="bg-white/5 border border-white/10 rounded-full px-3 py-2 text-center">Mon — Kids</span><span class="bg-white/5 border border-white/10 rounded-full px-3 py-2 text-center">Tue — Kids</span><span class="bg-white/5 border border-white/10 rounded-full px-3 py-2 text-center">Wed — Kids</span><span class="bg-white/5 border border-white/10 rounded-full px-3 py-2 text-center">Thu — Kids</span><span class="bg-[#C5A55A]/20 border border-[#C5A55A]/20 rounded-full px-3 py-2 text-center text-[#C5A55A]">Fri — Kids</span><span class="bg-[#0e7c4b]/30 border border-[#0e7c4b]/30 rounded-full px-3 py-2 text-center">Thu — Sisters</span></div>
       <a href="tel:+27693009337" class="mt-6 inline-flex bg-[#C5A55A] text-black px-6 py-3 rounded-full font-bold text-sm">📞 Call Us Now: 069 300 9337</a>
     </div>
-    <div class="bg-white rounded- p-9 border border-[#0e7c4b]/10 shadow-[0_20px_80px_-40px_rgba(14,124,75,.3)] relative" id="donate">
-      <div class="absolute top-0 left-8 right-8 h- bg-gradient-to-r from-transparent via-[#C5A55A] to-transparent"></div>
-      <h2 class="display font-extrabold text-[#0e7c4b] text-">Donate via Bank Transfer</h2>
+    <div class="bg-white rounded-[2rem] p-9 border border-[#0e7c4b]/10 shadow-[0_20px_80px_-40px_rgba(14,124,75,.3)] relative" id="donate">
+      <div class="absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-[#C5A55A] to-transparent"></div>
+      <h2 class="display font-extrabold text-[#0e7c4b] text-[20px]">Donate via Bank Transfer</h2>
       <div class="mt-5 space-y-3 text-sm bg-[#F6FAF7] rounded-2xl p-5 border border-[#0e7c4b]/10">
         <p class="flex justify-between"><span class="text-slate-400">Account Holder:</span> <b>EH Mthembu</b></p>
         <p class="flex justify-between"><span class="text-slate-400">Bank:</span> <b>FNB — Islamic Account</b></p>
@@ -175,16 +180,16 @@
       </div>
       <div class="mt-6">
         <a href="donate.html" class="shimmer bg-[#0e7c4b] text-white px-8 py-4 rounded-full font-bold text-sm w-full text-center block">Donate Now — Sadaqah Jariyah</a>
-        <p class="text- text-center text-slate-400 mt-3">WhatsApp proof to 069 300 9337 • 100% Lillah</p>
+        <p class="text-[11px] text-center text-slate-400 mt-3">WhatsApp proof to 069 300 9337 • 100% Lillah</p>
       </div>
     </div>
   </div>
 </div>
 
 <footer class="bg-[#081810] text-white/50 text-center py-12 mt-10 border-t border-white/5">
-  <p class="arabic text-white text-">السلام - The Peace</p>
-  <p class="mt-2 text- tracking-widest">© 2026 AL-SALAM | INANDA, DURBAN | BUILT BY PoisnWeb-067 127 1038</p>
+  <p class="arabic text-white text-[22px]">السلام - The Peace</p>
+  <p class="mt-2 text-[11px] tracking-widest">© 2026 AL-SALAM | INANDA, DURBAN | BUILT BY PoisnWeb-067 127 1038</p>
 </footer>
 
 </body>
-</html>
+  </html>
