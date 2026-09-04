@@ -11,23 +11,25 @@
 <style>
   :root{--green:#0e7c4b;--gold:#C5A55A;--dark:#081810}
   body{font-family:'Inter',sans-serif;background:#FCFEFD}
- .display{font-family:'Plus Jakarta Sans',sans-serif}
- .arabic{font-family:'Amiri',serif}
- .islamic-bg{position:relative;background:radial-gradient(1200px 600px at 20% -10%,#169666 0%,#0e7c4b 35%,#082f1d 100%);overflow:hidden}
- .islamic-bg::before{content:"";position:absolute;inset:-20%;background-image:url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='320' fill='white' fill-opacity='0.04' text-anchor='middle' dominant-baseline='middle'%3E﷽%3C/text%3E%3C/svg%3E");opacity:0.5}
+.display{font-family:'Plus Jakarta Sans',sans-serif}
+.arabic{font-family:'Amiri',serif}
+.islamic-bg{position:relative;background:radial-gradient(1200px 600px at 20% -10%,#169666 0%,#0e7c4b 35%,#082f1d 100%);overflow:hidden}
+.islamic-bg::before{content:"";position:absolute;inset:-20%;background-image:url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='320' fill='white' fill-opacity='0.04' text-anchor='middle' dominant-baseline='middle'%3E﷽%3C/text%3E%3C/svg%3E");opacity:0.5}
   @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
- .marquee-track{animation:marquee 40s linear infinite;display:flex;width:max-content}
- .masjid{clip-path:polygon(0 0,100% 0,100% 82%,92% 100%,84% 88%,74% 100%,62% 86%,50% 100%,38% 86%,26% 100%,16% 88%,8% 100%,0 82%)}
- .gallery-img{transition:transform.7s cubic-bezier(.23,1,.32,1)}
- .group:hover.gallery-img{transform:scale(1.08)}
+.marquee-track{animation:marquee 40s linear infinite;display:flex;width:max-content}
+.masjid{clip-path:polygon(0 0,100% 0,100% 82%,92% 100%,84% 88%,74% 100%,62% 86%,50% 100%,38% 86%,26% 100%,16% 88%,8% 100%,0 82%)}
+.gallery-img{transition:transform 0.7s cubic-bezier(.23,1,.32,1); will-change:transform}
+.group:hover.gallery-img{transform:scale(1.12)}
+.zoom-icon{opacity:0; transform:scale(0.8); transition:all 0.4s cubic-bezier(.23,1,.32,1)}
+.group:hover.zoom-icon{opacity:1; transform:scale(1)}
 </style>
 </head>
 <body class="antialiased">
 
 <div class="bg-[#081810] text-[#C5A55A] py-2.5 overflow-hidden whitespace-nowrap text-[11px] font-bold tracking-[0.2em] border-b border-[#C5A55A]/20">
   <div class="marquee-track inline-flex gap-12 w-max">
-    <span>🕌 FEEDING 60+ CHILDREN DAILY IN INANDA • GALLERY — REAL WORK FOR ALLAH • 100% LILLAH • JAZAKALLAH KHAIR •</span>
-    <span>🕌 FEEDING 60+ CHILDREN DAILY IN INANDA • GALLERY — REAL WORK FOR ALLAH • 100% LILLAH • JAZAKALLAH KHAIR •</span>
+    <span>🕌 FEEDING 60+ CHILDREN DAILY IN INANDA • GALLERY — REAL WORK FOR ALLAH • CLICK IMAGE TO ZOOM • 100% LILLAH •</span>
+    <span>🕌 FEEDING 60+ CHILDREN DAILY IN INANDA • GALLERY — REAL WORK FOR ALLAH • CLICK IMAGE TO ZOOM • 100% LILLAH •</span>
   </div>
 </div>
 
@@ -57,7 +59,7 @@
     <p class="arabic text-[28px] opacity-90">وَمَا تُقَدِّمُوا لِأَنفُسِكُم مِّنْ خَيْرٍ تَجِدُوهُ عِندَ اللَّهِ</p>
     <h1 class="display text-[48px] md:text-[64px] font-extrabold leading-[0.9] mt-4 tracking-[-0.02em]">Our Gallery</h1>
     <p class="text-white/70 mt-3 text-[13px] tracking-[0.3em] font-bold">FEEDING • WATERING • TEACHING — INANDA, SA</p>
-    <div class="mt-6 inline-flex bg-white/10 backdrop-blur border border-white/20 px-5 py-2 rounded-full text-[11px] font-bold tracking-widest">18+ MOMENTS OF SADAQAH JARIYAH • CLICK IMAGE TO VIEW</div>
+    <div class="mt-6 inline-flex bg-white/10 backdrop-blur border border-white/20 px-5 py-2 rounded-full text-[11px] font-bold tracking-widest"><i class="fa-solid fa-magnifying-glass-plus mr-2"></i>18+ MOMENTS • HOVER TO ZOOM • CLICK TO VIEW FULL</div>
   </div>
 </header>
 
@@ -65,42 +67,59 @@
 
 <div class="max-w-7xl mx-auto px-6 py-12">
   <div class="flex flex-wrap justify-center gap-2 mb-10">
-    <span class="bg-[#081810] text-white px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest">ALL WORK</span>
+    <span class="bg-[#081810] text-white px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest">ALL WORK • ZOOM ENABLED 🔍</span>
     <span class="bg-white border border-black/5 text-black/50 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest">FEEDING 🍞</span>
     <span class="bg-white border border-black/5 text-black/50 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest">WATER 💧</span>
     <span class="bg-white border border-black/5 text-black/50 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest">MADRESSAH 📖</span>
   </div>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 gallery">
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border border-black/5 shadow-[0_20px_60px_-30px_rgba(0,0,0,.2)] cursor-pointer"><img src="D1.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div><div class="absolute bottom-0 left-0 p-5 text-left"><p class="text-white text-[11px] font-bold tracking-widest bg-[#0e7c4b] px-2.5 py-1 rounded-full inline-block">FEEDING</p><p class="text-white font-bold text-[14px] mt-2">Daily Bread Distribution</p><p class="text-white/70 text-[11px]">Inanda • 60+ Children</p></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="D7.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div><div class="absolute bottom-0 left-0 p-5 text-left"><p class="text-white text-[11px] font-bold tracking-widest bg-[#C5A55A] text-black px-2.5 py-1 rounded-full inline-block">HOT MEALS</p><p class="text-white font-bold text-[14px] mt-2">Community Kitchen</p></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="IMG-20260903-WA0041.jpg" class="gallery-img w-full h-[280px] object-cover ring-2 ring-[#0e7c4b]/20"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div><div class="absolute bottom-0 left-0 p-5 text-left"><p class="text-white text-[11px] font-bold tracking-widest bg-white text-black px-2.5 py-1 rounded-full inline-block">31st AUGUST</p><p class="text-white font-bold text-[14px] mt-2">Feeding Program</p></div></div>
+    <!-- CARD TEMPLATE WITH ZOOM -->
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border border-black/5 shadow-[0_20px_60px_-30px_rgba(0,0,0,.2)] cursor-zoom-in">
+      <img src="D1.jpg" class="gallery-img w-full h-[280px] object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-60 group-hover:opacity-80 transition"></div>
+      <div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center text-black shadow-lg"><i class="fa-solid fa-magnifying-glass-plus text-[14px]"></i></div>
+      <div class="absolute bottom-0 left-0 p-5 text-left"><p class="text-white text-[11px] font-bold tracking-widest bg-[#0e7c4b] px-2.5 py-1 rounded-full inline-block">FEEDING</p><p class="text-white font-bold text-[14px] mt-2">Daily Bread Distribution</p><p class="text-white/70 text-[11px]">Inanda • 60+ Children</p></div>
+    </div>
 
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="D9.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute bottom-0 left-0 p-5 text-left"><p class="text-white text-[11px] font-bold tracking-widest">SADAQAH JARIYAH</p></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="083.jpg" class="gallery-img w-full h-[280px] object-cover"></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="IMG-20260903-WA0042.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute bottom-0 left-0 p-5 text-left"><p class="text-white text-[11px] font-bold tracking-widest bg-[#C5A55A] text-black px-2.5 py-1 rounded-full inline-block">MADRESSAH</p><p class="text-white font-bold text-[14px] mt-2">Qur'an Class</p></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in">
+      <img src="D7.jpg" class="gallery-img w-full h-[280px] object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+      <div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center text-black shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+      <div class="absolute bottom-0 left-0 p-5 text-left"><p class="text-white text-[11px] font-bold tracking-widest bg-[#C5A55A] text-black px-2.5 py-1 rounded-full inline-block">HOT MEALS</p><p class="text-white font-bold text-[14px] mt-2">Community Kitchen</p></div>
+    </div>
 
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="086.jpg" class="gallery-img w-full h-[280px] object-cover"></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="W1.jpeg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><div class="absolute bottom-0 left-0 p-5 text-left"><p class="text-white text-[11px] font-bold tracking-widest bg-[#2A5DB0] px-2.5 py-1 rounded-full inline-block">CLEAN WATER 💧</p></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="W2.jpg" class="gallery-img w-full h-[280px] object-cover"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in">
+      <img src="IMG-20260903-WA0041.jpg" class="gallery-img w-full h-[280px] object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+      <div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-[#C5A55A] rounded-full grid place-items-center text-black shadow-lg"><i class="fa-solid fa-expand"></i></div>
+      <div class="absolute bottom-0 left-0 p-5 text-left"><p class="text-white text-[11px] font-bold tracking-widest bg-white text-black px-2.5 py-1 rounded-full inline-block">31st AUGUST</p><p class="text-white font-bold text-[14px] mt-2">Feeding Program</p></div>
+    </div>
 
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="D1.jpg" class="gallery-img w-full h-[280px] object-cover"></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="081.jpg" class="gallery-img w-full h-[280px] object-cover"></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="082.jpg" class="gallery-img w-full h-[280px] object-cover"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="D9.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div><div class="absolute bottom-0 left-0 p-5 text-left"><p class="text-white text-[11px] font-bold tracking-widest bg-black/50 px-2 py-1 rounded-full">SADAQAH JARIYAH</p></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="083.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="IMG-20260903-WA0042.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-[#C5A55A] rounded-full grid place-items-center text-black"><i class="fa-solid fa-expand"></i></div><div class="absolute bottom-0 left-0 p-5 text-left"><p class="text-white text-[11px] font-bold tracking-widest bg-[#C5A55A] text-black px-2.5 py-1 rounded-full inline-block">MADRESSAH</p><p class="text-white font-bold text-[14px] mt-2">Qur'an Class</p></div></div>
 
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="084.jpg" class="gallery-img w-full h-[280px] object-cover"></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="W3.jpg" class="gallery-img w-full h-[280px] object-cover"></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="0209.jpg" class="gallery-img w-full h-[280px] object-cover"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="086.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="W1.jpeg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-[#2A5DB0] text-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div><div class="absolute bottom-0 left-0 p-5 text-left"><p class="text-white text-[11px] font-bold tracking-widest bg-[#2A5DB0] px-2.5 py-1 rounded-full inline-block">CLEAN WATER 💧</p></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="W2.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
 
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="0109.jpg" class="gallery-img w-full h-[280px] object-cover"></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="0309.jpg" class="gallery-img w-full h-[280px] object-cover"></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-pointer"><img src="0409.jpg" class="gallery-img w-full h-[280px] object-cover"></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="D1.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="081.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="082.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="084.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="W3.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="0209.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="0109.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="0309.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white border shadow cursor-zoom-in"><img src="0409.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
   </div>
 
   <div class="text-center mt-12 flex flex-wrap justify-center gap-3">
     <a href="index.html" class="bg-white border border-black/10 text-black px-8 py-4 rounded-full font-bold text-sm hover:bg-black hover:text-white transition">← Back to Home</a>
     <a href="donate.html" class="bg-[#0e7c4b] text-white px-8 py-4 rounded-full font-extrabold text-sm shadow-[0_10px_30px_-15px_#0e7c4b] hover:bg-[#0a5c38] transition">Donate Now — Sadaqah Jariyah</a>
-    <a href="index.html#gallery" class="bg-[#C5A55A] text-black px-8 py-4 rounded-full font-extrabold text-sm">View Slideshow on Home</a>
   </div>
 </div>
 
@@ -110,20 +129,65 @@
   <p class="mt-2 text-[11px] tracking-widest">© 2026 AL-SALAM | INANDA, DURBAN | BUILT BY PoisnWeb-067 127 1038</p>
 </footer>
 
-<div id="lightbox" class="fixed inset-0 hidden bg-black/90 backdrop-blur-xl z-[9999] p-6 items-center justify-center" onclick="this.style.display='none'">
-  <img id="lightbox-img" class="max-w-[92%] max-h-[88vh] rounded-[1.5rem] shadow-2xl border border-white/20 object-contain">
-  <p class="absolute bottom-8 text-white/60 text-[11px] tracking-widest">CLICK ANYWHERE TO CLOSE</p>
+<!-- PREMIUM LIGHTBOX WITH ZOOM -->
+<div id="lightbox" class="fixed inset-0 hidden bg-black/90 backdrop-blur-xl z-[9999] p-4 md:p-8 items-center justify-center flex-col">
+  <div class="absolute top-6 right-6 flex gap-3">
+    <button id="zoomIn" class="w-11 h-11 bg-white rounded-full grid place-items-center text-black font-bold shadow-lg hover:bg-[#C5A55A] transition"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+    <button id="zoomOut" class="w-11 h-11 bg-white/10 backdrop-blur border border-white/20 rounded-full grid place-items-center text-white font-bold hover:bg-white hover:text-black transition"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+    <button onclick="closeLightbox()" class="w-11 h-11 bg-white rounded-full grid place-items-center text-black font-bold shadow-lg"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div id="imgContainer" class="w-full h-full flex items-center justify-center overflow-auto">
+    <img id="lightbox-img" class="max-w-[92%] max-h-[82vh] rounded-[1.5rem] shadow-2xl border border-white/20 object-contain transition-transform duration-300 cursor-zoom-in">
+  </div>
+  <p class="absolute bottom-6 text-white/50 text-[11px] tracking-widest text-center px-6">CLICK IMAGE TO ZOOM • SCROLL TO ZOOM • CLICK OUTSIDE TO CLOSE • <span class="text-[#C5A55A]">PREMIUM ZOOM</span></p>
 </div>
 
 <script>
-  document.querySelectorAll('.gallery img').forEach(img=>{
-    img.style.cursor='zoom-in';
-    img.onclick=()=>{
-      const lb=document.getElementById('lightbox');
-      lb.style.display='flex';
-      document.getElementById('lightbox-img').src=img.src;
+  let scale = 1;
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  const container = document.getElementById('imgContainer');
+
+  function openLightbox(src){
+    lb.style.display='flex';
+    lbImg.src=src;
+    scale=1;
+    lbImg.style.transform=`scale(${scale})`;
+    document.body.style.overflow='hidden';
+  }
+  function closeLightbox(){
+    lb.style.display='none';
+    document.body.style.overflow='';
+    scale=1;
+  }
+
+  document.querySelectorAll('.gallery.group').forEach(card=>{
+    card.onclick=()=>{
+      const img = card.querySelector('img');
+      openLightbox(img.src);
     }
   });
+
+  lbImg.onclick=(e)=>{
+    e.stopPropagation();
+    scale = scale===1? 2 : 1;
+    lbImg.style.transform=`scale(${scale})`;
+    lbImg.style.cursor = scale===1? 'zoom-in' : 'zoom-out';
+  };
+
+  document.getElementById('zoomIn').onclick=(e)=>{e.stopPropagation(); scale=Math.min(scale+0.5,4); lbImg.style.transform=`scale(${scale})`;};
+  document.getElementById('zoomOut').onclick=(e)=>{e.stopPropagation(); scale=Math.max(scale-0.5,1); lbImg.style.transform=`scale(${scale})`;};
+
+  lb.onclick=(e)=>{ if(e.target===lb || e.target===container) closeLightbox(); };
+
+  lb.addEventListener('wheel',(e)=>{
+    e.preventDefault();
+    if(e.deltaY<0) scale=Math.min(scale+0.2,4);
+    else scale=Math.max(scale-0.2,1);
+    lbImg.style.transform=`scale(${scale})`;
+  },{passive:false});
+
+  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeLightbox(); });
 </script>
 </body>
-                                                                 </html>
+                                                                                                         </html>
