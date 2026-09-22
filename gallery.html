@@ -32,6 +32,8 @@
   @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .marquee{animation:marquee 50s linear infinite;display:flex;width:max-content}
 .masjid{clip-path:ellipse(110% 100% at 50% 0%)}
+.folder-btn.active{background:#0B1D3A;color:white;opacity:1;border-color:#0B1D3A}
+.empty-box{border:2px dashed rgba(11,29,58,0.15);background:rgba(11,29,58,0.02)}
 </style>
 </head>
 <body class="antialiased">
@@ -65,32 +67,72 @@
 </header>
 
 <div class="max-w-[1280px] mx-auto px-6 py-12">
-  <div class="flex flex-wrap justify-center gap-2 mb-10">
-    <span class="bg-[#0B1D3A] text-white px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest">ALL</span>
-    <span class="bg-white border border-[#0B1D3A]/10 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest opacity-60">FEEDING 🍞</span>
-    <span class="bg-white border border-[#0B1D3A]/10 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest opacity-60">WATER 💧</span>
-    <span class="bg-white border border-[#0B1D3A]/10 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest opacity-60">MADRASAH 📖</span>
+  <div class="flex flex-wrap justify-center gap-2 mb-10" id="folderTabs">
+    <button data-folder="all" class="folder-btn active bg-[#0B1D3A] text-white px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest border border-[#0B1D3A]">ALL</button>
+    <button data-folder="recent" class="folder-btn bg-white border border-[#0B1D3A]/10 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest">RECENT WORK</button>
+    <button data-folder="september" class="folder-btn bg-white border border-[#0B1D3A]/10 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest">SEPTEMBER 2026</button>
+    <button data-folder="october" class="folder-btn bg-white border border-[#0B1D3A]/10 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest">OCTOBER 2026</button>
+    <button data-folder="november" class="folder-btn bg-white border border-[#0B1D3A]/10 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest">NOVEMBER 2026</button>
   </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 gallery">
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="D1.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div><div class="absolute bottom-0 left-0 p-5"><span class="bg-[#A5D8FF] text-[#0B1D3A] text-[10px] font-bold px-3 py-1 rounded-full">FEEDING</span><p class="text-white font-bold text-[14px] mt-2">Daily Bread Distribution</p></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="D7.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="IMG-20260903-WA0041.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-[#A5D8FF] rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div><div class="absolute bottom-0 left-0 p-5"><span class="bg-white text-black text-[10px] font-bold px-3 py-1 rounded-full">31st AUG</span></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="D9.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="083.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="IMG-20260903-WA0042.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-[#A5D8FF] rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div><div class="absolute bottom-0 left-0 p-5"><span class="bg-[#0B1D3A] text-[#A5D8FF] text-[10px] font-bold px-3 py-1 rounded-full">MADRASAH</span></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="086.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="W1.jpeg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-[#0B1D3A] text-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div><div class="absolute bottom-0 left-0 p-5"><span class="bg-[#0B1D3A] text-white text-[10px] font-bold px-3 py-1 rounded-full">WATER 💧</span></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="W2.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="081.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
-    <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="082.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
-    <div class="group relative hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="0002.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
-  <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="0001.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
-    <div class="group relative hidden rounded-[1.5rem] bg-white card cursor-zoom-in"><img src="000.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
-</div>
+  <div class="gallery-section" data-section="recent">
+    <div class="flex items-center gap-3 mb-6">
+      <h2 class="display font-extrabold text-[22px] tracking-tight">Recent Work</h2>
+      <span class="bg-[#A5D8FF] text-[#0B1D3A] text-[10px] font-bold px-3 py-1 rounded-full">12 ITEMS</span>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in gallery-item" data-folder="recent"><img src="D1.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div><div class="absolute bottom-0 left-0 p-5"><span class="bg-[#A5D8FF] text-[#0B1D3A] text-[10px] font-bold px-3 py-1 rounded-full">FEEDING</span><p class="text-white font-bold text-[14px] mt-2">Daily Bread Distribution</p></div></div>
+      <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in gallery-item" data-folder="recent"><img src="D7.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
+      <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in gallery-item" data-folder="recent"><img src="IMG-20260903-WA0041.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-[#A5D8FF] rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div><div class="absolute bottom-0 left-0 p-5"><span class="bg-white text-black text-[10px] font-bold px-3 py-1 rounded-full">31st AUG</span></div></div>
+      <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in gallery-item" data-folder="recent"><img src="D9.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
+      <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in gallery-item" data-folder="recent"><img src="083.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
+      <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in gallery-item" data-folder="recent"><img src="IMG-20260903-WA0042.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-[#A5D8FF] rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div><div class="absolute bottom-0 left-0 p-5"><span class="bg-[#0B1D3A] text-[#A5D8FF] text-[10px] font-bold px-3 py-1 rounded-full">MADRASAH</span></div></div>
+      <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in gallery-item" data-folder="recent"><img src="086.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
+      <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in gallery-item" data-folder="recent"><img src="W1.jpeg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-[#0B1D3A] text-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div><div class="absolute bottom-0 left-0 p-5"><span class="bg-[#0B1D3A] text-white text-[10px] font-bold px-3 py-1 rounded-full">WATER 💧</span></div></div>
+      <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in gallery-item" data-folder="recent"><img src="W2.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
+      <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in gallery-item" data-folder="recent"><img src="081.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
+      <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in gallery-item" data-folder="recent"><img src="082.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
+      <div class="group relative overflow-hidden rounded-[1.5rem] bg-white card cursor-zoom-in gallery-item" data-folder="recent"><img src="0001.jpg" class="gallery-img w-full h-[280px] object-cover"><div class="absolute top-4 right-4 zoom-icon w-10 h-10 bg-white rounded-full grid place-items-center"><i class="fa-solid fa-expand text-[12px]"></i></div></div>
+    </div>
   </div>
 
-  <div class="text-center mt-12 flex justify-center gap-3">
+  <div class="gallery-section mt-16" data-section="september">
+    <div class="flex items-center gap-3 mb-6">
+      <h2 class="display font-extrabold text-[22px] tracking-tight">September 2026</h2>
+      <span class="bg-white border border-[#0B1D3A]/10 text-[10px] font-bold px-3 py-1 rounded-full">EMPTY — UPLOAD YOUR WORK</span>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="grid-september">
+      <div class="empty-box rounded-[1.5rem] h-[280px] grid place-items-center text-center p-6">
+        <div><i class="fa-solid fa-folder-open text-[32px] opacity-20 mb-3"></i><p class="text-[13px] font-bold opacity-60">No images yet</p><p class="text-[11px] opacity-40 mt-1">Upload to September folder<br><code class="bg-[#0B1D3A]/5 px-2 py-1 rounded">images/september/</code></p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-section mt-16" data-section="october">
+    <div class="flex items-center gap-3 mb-6">
+      <h2 class="display font-extrabold text-[22px] tracking-tight">October 2026</h2>
+      <span class="bg-white border border-[#0B1D3A]/10 text-[10px] font-bold px-3 py-1 rounded-full">EMPTY — UPLOAD YOUR WORK</span>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="grid-october">
+      <div class="empty-box rounded-[1.5rem] h-[280px] grid place-items-center text-center p-6">
+        <div><i class="fa-solid fa-folder-open text-[32px] opacity-20 mb-3"></i><p class="text-[13px] font-bold opacity-60">No images yet</p><p class="text-[11px] opacity-40 mt-1">Upload to October folder<br><code class="bg-[#0B1D3A]/5 px-2 py-1 rounded">images/october/</code></p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-section mt-16" data-section="november">
+    <div class="flex items-center gap-3 mb-6">
+      <h2 class="display font-extrabold text-[22px] tracking-tight">November 2026</h2>
+      <span class="bg-white border border-[#0B1D3A]/10 text-[10px] font-bold px-3 py-1 rounded-full">EMPTY — UPLOAD YOUR WORK</span>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="grid-november">
+      <div class="empty-box rounded-[1.5rem] h-[280px] grid place-items-center text-center p-6">
+        <div><i class="fa-solid fa-folder-open text-[32px] opacity-20 mb-3"></i><p class="text-[13px] font-bold opacity-60">No images yet</p><p class="text-[11px] opacity-40 mt-1">Upload to November folder<br><code class="bg-[#0B1D3A]/5 px-2 py-1 rounded">images/november/</code></p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-16 flex justify-center gap-3">
     <a href="index.html" class="bg-white border border-[#0B1D3A]/10 text-[#0B1D3A] px-8 py-4 rounded-full font-bold text-[12px] tracking-widest">← HOME</a>
     <a href="donate.html" class="bg-[#0B1D3A] text-white px-8 py-4 rounded-full font-bold text-[12px] tracking-widest">DONATE — LILLAH</a>
   </div>
@@ -116,13 +158,26 @@
   let scale=1;const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightbox-img'),container=document.getElementById('imgContainer');
   function openLightbox(src){lb.style.display='flex';lbImg.src=src;scale=1;lbImg.style.transform=`scale(${scale})`;document.body.style.overflow='hidden';}
   function closeLightbox(){lb.style.display='none';document.body.style.overflow='';scale=1;}
-  document.querySelectorAll('.gallery.group').forEach(c=>{c.onclick=()=>openLightbox(c.querySelector('img').src)});
+  document.querySelectorAll('.gallery-item').forEach(c=>{c.onclick=()=>openLightbox(c.querySelector('img').src)});
   lbImg.onclick=(e)=>{e.stopPropagation();scale=scale===1?2:1;lbImg.style.transform=`scale(${scale})`;};
   document.getElementById('zoomIn').onclick=(e)=>{e.stopPropagation();scale=Math.min(scale+0.5,4);lbImg.style.transform=`scale(${scale})`;};
   document.getElementById('zoomOut').onclick=(e)=>{e.stopPropagation();scale=Math.max(scale-0.5,1);lbImg.style.transform=`scale(${scale})`;};
   lb.onclick=(e)=>{if(e.target===lb||e.target===container)closeLightbox();};
   lb.addEventListener('wheel',(e)=>{e.preventDefault();scale=e.deltaY<0?Math.min(scale+0.2,4):Math.max(scale-0.2,1);lbImg.style.transform=`scale(${scale})`;},{passive:false});
   document.addEventListener('keydown',(e)=>{if(e.key==='Escape')closeLightbox();});
+  const tabs=document.querySelectorAll('.folder-btn');
+  const sections=document.querySelectorAll('.gallery-section');
+  tabs.forEach(btn=>{
+    btn.onclick=()=>{
+      tabs.forEach(b=>b.classList.remove('active','bg-[#0B1D3A]','text-white'));
+      btn.classList.add('active','bg-[#0B1D3A]','text-white');
+      const f=btn.dataset.folder;
+      sections.forEach(s=>{
+        if(f==='all') s.style.display='block';
+        else s.style.display=s.dataset.section===f?'block':'none';
+      });
+    };
+  });
 </script>
 </body>
-    </html>
+</html>
