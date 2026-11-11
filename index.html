@@ -24,10 +24,10 @@ body{font-family:'Inter',sans-serif;background:#FCFDFF;color:#0B1D3A}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .marquee{animation:marquee 50s linear infinite;display:flex;width:max-content}
 .masjid{clip-path:ellipse(110% 100% at 50% 0%)}
-.nov-wizard-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.5s ease-in-out}
+.nov-wizard-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.8s ease-in-out}
 .nov-wizard-img.active{opacity:1}
-@keyframes slowZoom{0%{transform:scale(1)}100%{transform:scale(1.08)}}
-.nov-wizard-img.active{animation:slowZoom 6s ease-in-out forwards}
+@keyframes slowZoom{0%{transform:scale(1)}100%{transform:scale(1.06)}}
+.nov-wizard-img.active{animation:slowZoom 7s ease-in-out forwards}
 </style>
 </head>
 <body class="antialiased">
@@ -60,45 +60,52 @@ body{font-family:'Inter',sans-serif;background:#FCFDFF;color:#0B1D3A}
 </div>
 </header>
 
-<!-- NOV 10 2026 DISTRIBUTION WIZARD - ADDED -->
+<!-- FIXED PROFESSIONAL WIZARD - NO MORE TRAFFIC -->
 <section class="max-w-[1280px] mx-auto px-6 -mt-24 relative z-30">
   <div class="card rounded-[2.5rem] overflow-hidden p-2 md:p-3 bg-white">
-    <div class="relative rounded-[2rem] overflow-hidden bg-[#070F26] h-[520px] md:h-[600px]" id="novWizard">
-      <img src="nov1.png" alt="Distribution 10/11/2026" class="nov-wizard-img active" id="novImg0">
-      <img src="nov2.png" alt="Madrasah Class 10/11/2026" class="nov-wizard-img" id="novImg1">
-      <img src="nov3.png" alt="Distribution 10/11/2026" class="nov-wizard-img" id="novImg2">
-      <div class="absolute inset-0 bg-gradient-to-t from-[#070F26] via-[#070F26]/40 to-transparent pointer-events-none"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-[#070F26]/60 via-transparent to-transparent pointer-events-none"></div>
-      <div class="absolute top-6 left-6 md:top-8 md:left-8 flex items-center gap-3 z-10">
-        <div class="bg-white text-[#0B1D3A] px-5 py-2 rounded-full text-[11px] font-extrabold tracking-[0.2em] flex items-center gap-2 shadow-xl">
-          <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+    <div class="relative rounded-[2rem] overflow-hidden bg-[#070F26] h-[580px] md:h-[640px] flex flex-col justify-between" id="novWizard">
+      <img src="nov1.png" alt="Distribution 10/11/2026" class="nov-wizard-img active">
+      <img src="nov2.png" alt="Madrasah Class 10/11/2026" class="nov-wizard-img">
+      <img src="nov3.png" alt="Distribution 10/11/2026" class="nov-wizard-img">
+      
+      <div class="absolute inset-0 bg-gradient-to-t from-[#070F26] via-[#070F26]/60 to-[#070F26]/10 pointer-events-none"></div>
+
+      <!-- TOP - SEPARATED -->
+      <div class="relative z-10 p-6 md:p-8 flex justify-between items-start">
+        <div class="bg-white text-[#0B1D3A] pl-3 pr-5 py-2.5 rounded-full text-[11px] font-extrabold tracking-[0.15em] flex items-center gap-2.5 shadow-xl">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse"></span>
           LATEST UPDATE
         </div>
-        <div class="bg-[#A5D8FF] text-[#0B1D3A] px-5 py-2 rounded-full text-[11px] font-extrabold tracking-[0.2em] shadow-xl">
-          <i class="fa-solid fa-calendar-day mr-1"></i> 10 / 11 / 2026
+        <div class="bg-[#0B1D3A]/80 backdrop-blur-xl border border-white/20 text-white px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.15em] flex items-center gap-2">
+          <i class="fa-regular fa-calendar text-[#A5D8FF]"></i> 10 NOV 2026
         </div>
       </div>
-      <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12 z-10">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div class="max-w-2xl">
-            <p class="text-[#A5D8FF] text-[11px] tracking-[0.35em] font-bold mb-3">DISTRIBUTION & MADRASAH CLASS</p>
-            <h2 class="serif text-[38px] md:text-[56px] leading-[0.9] text-white">Feeding & <span class="italic font-light text-[#A5D8FF]">Ilm</span> in Inanda</h2>
-            <p class="mt-4 text-[13px] md:text-[14px] leading-[1.7] text-white/70 max-w-xl">Alhamdulillah, on <b class="text-white">10th November 2026</b> we held our monthly food distribution and Madrasah class for 60+ children. Hot meals, hifz revision, and duas for our donors.</p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-2 rounded-full text-[10px] font-bold tracking-widest"><i class="fa-solid fa-bowl-rice mr-1 text-[#A5D8FF]"></i> FOOD DISTRIBUTION</span>
-              <span class="bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-2 rounded-full text-[10px] font-bold tracking-widest"><i class="fa-solid fa-book-quran mr-1 text-[#A5D8FF]"></i> MADRASAH CLASS</span>
-              <span class="bg-[#A5D8FF] text-[#0B1D3A] px-4 py-2 rounded-full text-[10px] font-bold tracking-widest">INANDA • DURBAN</span>
-            </div>
+
+      <!-- BOTTOM - CLEAN, NO OVERLAP -->
+      <div class="relative z-10 p-7 md:p-10">
+        <div class="inline-flex bg-[#A5D8FF] text-[#0B1D3A] px-4 py-1.5 rounded-full text-[10px] font-extrabold tracking-[0.25em] mb-4">
+          DISTRIBUTION & MADRASAH CLASS
+        </div>
+        <h2 class="serif text-[36px] md:text-[54px] leading-[0.95] text-white max-w-xl">
+          Feeding & <span class="italic font-light text-[#A5D8FF]">Ilm</span> in Inanda
+        </h2>
+        <p class="mt-4 text-[13.5px] md:text-[14.5px] leading-[1.7] text-white/75 max-w-[560px]">
+          Alhamdulillah, on <span class="text-white font-bold">10th November 2026</span> we held our monthly food distribution and Madrasah class for 60+ children. Hot meals, hifz revision, and duas for our donors.
+        </p>
+        <div class="mt-6 flex flex-col md:flex-row md:items-center justify-between gap-5">
+          <div class="flex flex-wrap gap-2.5">
+            <span class="inline-flex items-center gap-2 bg-white text-[#0B1D3A] px-4 py-2 rounded-full text-[11px] font-bold">🍲 FOOD DISTRIBUTION</span>
+            <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-2 rounded-full text-[11px] font-bold">📖 MADRASAH CLASS</span>
           </div>
           <div class="flex items-center gap-3">
-            <button onclick="prevNov()" class="w-12 h-12 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white grid place-items-center hover:bg-white hover:text-[#0B1D3A] transition"><i class="fa-solid fa-chevron-left text-[12px]"></i></button>
-            <button onclick="nextNov()" class="w-12 h-12 rounded-full bg-white text-[#0B1D3A] grid place-items-center hover:bg-[#A5D8FF] transition shadow-xl"><i class="fa-solid fa-chevron-right text-[12px]"></i></button>
+            <div class="flex items-center gap-2 mr-2">
+              <div class="nov-dot w-8 h-1.5 rounded-full bg-white transition-all duration-500"></div>
+              <div class="nov-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-500"></div>
+              <div class="nov-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-500"></div>
+            </div>
+            <button onclick="prevNov()" class="w-11 h-11 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white grid place-items-center hover:bg-white hover:text-[#0B1D3A] transition"><i class="fa-solid fa-chevron-left text-[11px]"></i></button>
+            <button onclick="nextNov()" class="w-11 h-11 rounded-full bg-white text-[#0B1D3A] grid place-items-center hover:bg-[#A5D8FF] transition shadow-xl"><i class="fa-solid fa-chevron-right text-[11px]"></i></button>
           </div>
-        </div>
-        <div class="mt-8 flex gap-2">
-          <div class="nov-dot w-10 h-1.5 rounded-full bg-white transition-all duration-500" id="dot0"></div>
-          <div class="nov-dot w-6 h-1.5 rounded-full bg-white/30 transition-all duration-500" id="dot1"></div>
-          <div class="nov-dot w-6 h-1.5 rounded-full bg-white/30 transition-all duration-500" id="dot2"></div>
         </div>
       </div>
     </div>
@@ -108,18 +115,16 @@ body{font-family:'Inter',sans-serif;background:#FCFDFF;color:#0B1D3A}
 let novCurrent = 0;
 const novTotal = 3;
 function showNov(n){
-  document.querySelectorAll('.nov-wizard-img').forEach((img,i)=>{
-    img.classList.toggle('active', i===n);
-  });
-  document.querySelectorAll('.nov-dot').forEach((dot,i)=>{
-    if(i===n){ dot.className='nov-dot w-10 h-1.5 rounded-full bg-white transition-all duration-500'; }
-    else { dot.className='nov-dot w-6 h-1.5 rounded-full bg-white/30 transition-all duration-500'; }
+  document.querySelectorAll('.nov-wizard-img').forEach((img,i)=>{ img.classList.toggle('active', i===n); });
+  document.querySelectorAll('.nov-dot').forEach((d,idx)=>{
+    let dotIndex = idx % 3;
+    d.className = dotIndex===n ? 'nov-dot w-8 h-1.5 rounded-full bg-white transition-all duration-500' : 'nov-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all duration-500';
   });
   novCurrent=n;
 }
 function nextNov(){ showNov((novCurrent+1)%novTotal); }
 function prevNov(){ showNov((novCurrent-1+novTotal)%novTotal); }
-setInterval(nextNov, 4000);
+setInterval(nextNov, 4500);
 let startX=0;
 const wizardEl=document.getElementById('novWizard');
 if(wizardEl){
@@ -252,4 +257,4 @@ Once our registration is complete, we will immediately update our banking detail
 <p class="mt-8 text-[10px]">Built by PoisnWeb - 067 127 1038</p>
 </footer>
 </body>
-</html>
+        </html>
